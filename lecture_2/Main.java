@@ -12,6 +12,7 @@ public class Main {
         varOgrenci2 = scanNot1.nextInt();
         System.out.println("Matematik ortalaması > ");
         System.out.print((varOgrenci1 + varOgrenci2)/2);
-        boolean gecme = ((varOgrenci1 + varOgrenci2)/2) ? "Gecti !" : "Kaldı !";
+        scanNot.close();
+        scanNot1.close();
 
 }}
