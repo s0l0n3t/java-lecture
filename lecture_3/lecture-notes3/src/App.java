@@ -48,7 +48,7 @@ public class App {
                 break;// break switch-case'de kullanılması çok önemlidir.
             default:
             System.out.println("Default run !");
-        }
+        }/* 
         int islem,firstS,secS;
         System.out.println("1- toplama\n2- Cikartma\n");
         // hesap makinesi:
@@ -71,9 +71,22 @@ public class App {
                 break;
             default:
                 System.out.println("Bu islem gecerli degildir.");
-        }
+        }*/
         
-
+        String username,password;
+        System.out.print("> ");
+        username = coScanner.nextLine();
+        
+        System.out.print("> ");
+        password = coScanner.nextLine();
+        if(username.equals("root") && password.equals("1234")){
+            System.out.println("Giris Basarili !");
+            // string için equals kullanılmalı !
+        }
+        else{
+            System.out.println("Tekrar deneyiniz !");
+            System.out.println(password);
+        }
 
 
 
