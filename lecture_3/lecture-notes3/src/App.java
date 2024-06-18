@@ -142,9 +142,42 @@ public class App {
         else{
             System.out.println("There is equalisation !");
         }*/
+        int pathKm,age,type;
+        double cash;
 
+        System.out.print("KM> ");
+        pathKm = coScanner.nextInt();
+
+        System.out.print("age> ");
+        age = coScanner.nextInt();
+
+        System.out.print("type> \n1-Tek Yon\n2-Gidis-Donus ");
+        type = coScanner.nextInt();
+        cash = (pathKm * 10)/100;
         
+        if (pathKm > 0 && age > 0 && type > 0 || type < 3){
+        if(type == 2){
+            cash *=2;
+            cash = cash - cash * 0.20;
+        }
+        if (age < 12 ){
+            cash = cash - (cash/2);
 
+        }
+        else if(age >= 12 && age <= 24){
+            cash = cash - (cash*10)/100;
+        }
+        else if(age > 65){
+            cash = cash - (cash*10)/100;
+        }
+        else{
+
+        }}
+        else{
+            System.out.println("Hatalı Veri Girdiniz !");
+        }
+
+        System.out.println(cash);
 
 
     }
