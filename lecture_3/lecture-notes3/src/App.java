@@ -72,7 +72,7 @@ public class App {
             default:
                 System.out.println("Bu islem gecerli degildir.");
         }*/
-        
+        /*
         String username,password;
         System.out.print("> ");
         username = coScanner.nextLine();
@@ -86,8 +86,36 @@ public class App {
         else{
             System.out.println("Tekrar deneyiniz !");
             System.out.println(password);
-        }
+        }*//*
+        int point1;
+        int point;
+        System.out.print("Not 1 >");
+        point1 = coScanner.nextInt();
+        System.out.print("Not 2 >");
+        point = coScanner.nextInt();
 
+        if(point > 0 && point < 100){
+            System.out.println("Puan: ");
+            System.out.println((point*0.4) + (point1*0.6));
+
+        }*/
+
+
+        int sicaklik;
+        System.out.print("> ");
+        sicaklik = coScanner.nextInt();
+        if(sicaklik < 5){
+            System.out.println("KAYAK");
+        }
+        if(sicaklik >= 5 && sicaklik <= 15){
+            System.out.println("SİNEMA");
+        }
+        if(sicaklik > 10 && sicaklik < 25){
+            System.out.println("PİKNİK");
+        }
+        else{
+            System.out.println("YÜZME");
+        }
 
 
 
