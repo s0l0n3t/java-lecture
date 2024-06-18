@@ -118,7 +118,7 @@ public class App {
         else{
             System.out.println("YÜZME");
         } */
-
+        /*
         int first=0,sec=0,third=0;
 
         System.out.println("> ");
@@ -141,6 +141,11 @@ public class App {
         }
         else{
             System.out.println("There is equalisation !");
-        }
+        }*/
+
+        
+
+
+
     }
 }
