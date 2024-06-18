@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+import javax.lang.model.util.ElementScanner14;
+
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -100,7 +102,7 @@ public class App {
 
         }*/
 
-
+        /*
         int sicaklik;
         System.out.print("> ");
         sicaklik = coScanner.nextInt();
@@ -115,9 +117,30 @@ public class App {
         }
         else{
             System.out.println("YÜZME");
+        } */
+
+        int first=0,sec=0,third=0;
+
+        System.out.println("> ");
+        first = coScanner.nextInt();
+
+        System.out.println("> ");
+        sec = coScanner.nextInt();
+
+        System.out.println("> ");
+        third = coScanner.nextInt();
+        if(first> sec && first > third){
+            System.out.println("First is the biggest");
+
         }
-
-
-
+        else if(sec > first && sec > third){
+            System.out.println("Second is the biggest");
+        }
+        else if(third>first && third > sec){
+            System.out.println("Third is the biggest");
+        }
+        else{
+            System.out.println("There is equalisation !");
+        }
     }
 }
