@@ -182,7 +182,7 @@ public class App {
 
 
 
-
+        /*
         int month=0;
         System.out.print("Ay> ");
         month = coScanner.nextInt();
@@ -226,7 +226,27 @@ public class App {
             default:
                 break;
 
-        }
+        }*/
 
+        int year=0;
+        System.out.print("Year> ");
+        year = coScanner.nextInt();
+        if(year %100 == 0){
+            if(year %400 ==0){
+                System.out.println("Artik yil !");
+            }
+            else{
+                System.out.println("Artik Yil Degil !");
+            }
+
+        }
+        else{
+            if(year % 4 == 0){
+                System.out.println("Artik yil !");
+            }
+            else{
+                System.out.println("Artik yil değil !");
+            }
+        }
     }
 }
