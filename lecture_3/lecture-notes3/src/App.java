@@ -247,7 +247,7 @@ public class App {
             else{
                 System.out.println("Artik yil değil !");
             }
-        }*/
+        }*//* 
         int intNumber=0;
         while(intNumber <5){
             intNumber++;
@@ -266,6 +266,20 @@ public class App {
             selectedNumber++;
 
         }
+        */
+        int selectedNumber =0;
+        int typeNumber=0;
+        
 
+        while (true){
+            
+            System.out.println("Number> ");
+            selectedNumber = coScanner.nextInt();
+
+            if(selectedNumber % 3 == 0){
+                typeNumber += selectedNumber;
+            }
+            System.out.println(typeNumber);
+        }
     }
 }
