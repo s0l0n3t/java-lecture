@@ -295,7 +295,7 @@ public class App {
         }
         return count;
     }*/         // ARMSTORNG NUMBER - PRACTICE
-/*
+/* 
         int selectedNumber = 0,tempNumber=0;
         selectedNumber = coScanner.nextInt();
         int countNumber = 0;
@@ -312,6 +312,20 @@ public class App {
             
         }
         System.out.println(total);
- */        
-    }   
+
+
+*/       // Harmonic number practice
+/*
+        double selectedNumber=0,total=0;
+        selectedNumber = coScanner.nextInt();
+        for(int i = 1;i<= selectedNumber; i++){
+            total += Math.pow(i, -1);
+        }
+        System.out.println(total);
+    }   */
+
+
+        
+
+    }
 }
