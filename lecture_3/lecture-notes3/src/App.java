@@ -284,7 +284,7 @@ public class App {
             }
             System.out.println(typeNumber);
         }*/
-
+        /*
         System.out.println(factorial(4));
     }
     public static int factorial(int x){
@@ -294,5 +294,24 @@ public class App {
             count *= i;
         }
         return count;
-    }
+    }*/         // ARMSTORNG NUMBER - PRACTICE
+/*
+        int selectedNumber = 0,tempNumber=0;
+        selectedNumber = coScanner.nextInt();
+        int countNumber = 0;
+        int total=0;
+        tempNumber = selectedNumber;
+        while(selectedNumber > 0){
+            selectedNumber = selectedNumber /10;
+            countNumber++; //rakamlar
+        }
+        
+        while(tempNumber > 0){
+            total += Math.pow(tempNumber%10, countNumber);
+            tempNumber = tempNumber /10;
+            
+        }
+        System.out.println(total);
+ */        
+    }   
 }
