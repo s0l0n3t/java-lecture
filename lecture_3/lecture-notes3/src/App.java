@@ -322,7 +322,7 @@ public class App {
             total += Math.pow(i, -1);
         }
         System.out.println(total);
-    }   */ // Min - max practice
+    }    // Min - max practice
         int selectedNumber=0;
         int best =0,worst=500;
 
@@ -338,8 +338,17 @@ public class App {
             System.out.println("Worst: " + worst);
             System.out.println("Best: "+ best);
         }
+        */
+        // ters Ucgen
+        int selectedNumber =0;
+        selectedNumber = coScanner.nextInt();
+        for(int i = 0;i<selectedNumber;i++){
+            System.out.print("\n");
+            for(int ab = selectedNumber;ab>i;ab--){
+                System.out.print("*");
 
-
-
+            }
+        }
+            
     }
 }
