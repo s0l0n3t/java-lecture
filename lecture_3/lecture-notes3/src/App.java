@@ -1,4 +1,7 @@
+import java.lang.Math;
+
 import java.util.Scanner;
+import java.util.function.ToIntFunction;
 
 import javax.lang.model.util.ElementScanner14;
 
@@ -266,7 +269,7 @@ public class App {
             selectedNumber++;
 
         }
-        */
+        *//*
         int selectedNumber =0;
         int typeNumber=0;
         
@@ -280,6 +283,16 @@ public class App {
                 typeNumber += selectedNumber;
             }
             System.out.println(typeNumber);
+        }*/
+
+        System.out.println(factorial(4));
+    }
+    public static int factorial(int x){
+        
+        int count = 1;
+        for(int i = 1;i<= x; i++){
+            count *= i;
         }
+        return count;
     }
 }
