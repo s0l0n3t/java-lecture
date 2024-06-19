@@ -322,10 +322,24 @@ public class App {
             total += Math.pow(i, -1);
         }
         System.out.println(total);
-    }   */
+    }   */ // Min - max practice
+        int selectedNumber=0;
+        int best =0,worst=500;
+
+        while(true){
+            System.out.print("> ");
+            selectedNumber = coScanner.nextInt();
+            if(best < selectedNumber){
+                best = selectedNumber;
+            }
+            if(worst> selectedNumber){
+                worst = selectedNumber;
+            }
+            System.out.println("Worst: " + worst);
+            System.out.println("Best: "+ best);
+        }
 
 
-        
 
     }
 }
