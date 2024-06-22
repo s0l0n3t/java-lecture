@@ -16,9 +16,17 @@ public class App {
         total *= r(3);
         System.out.println(total);
          */
+
+         //Polidrom Number finder calling
+         /*
         numberTest = tScanner.nextInt();
         System.out.println(isPolindrom(numberTest));
-        tScanner.close();
+        tScanner.close(); */
+
+        int fiboNumber =0;
+        fiboNumber = tScanner.nextInt();
+        System.out.println(fiboFunction(fiboNumber));
+
     }
     /*
     static int carpma(int numberA,int numberB){
@@ -45,7 +53,8 @@ public class App {
         }
         //f(n) = f(m-1) + n problemi cozumu
         return r(n-1)*n;
-    } */
+    } */ // Palidrom number finder function
+     /*
    static Boolean isPolindrom(int numberA){
     int reverseNumber=0,lastNumber=0,numberB = numberA;
     while(numberA != 0 ){
@@ -60,7 +69,18 @@ public class App {
     else{
         System.out.println(reverseNumber);
         return false;
+    } 
+    
+   }*/
+
+   static int fiboFunction(int x){
+    
+    if (x == 1 || x == 2){
+        return 1;
+
     }
     
+    return fiboFunction(x-1) + fiboFunction(x-2);
    }
+
 }
