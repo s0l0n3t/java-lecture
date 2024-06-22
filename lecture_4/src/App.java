@@ -3,7 +3,7 @@ import java.util.Scanner;;
 public class App {
     public static void main(String[] args) throws Exception {
         Scanner tScanner = new Scanner(System.in);
-        int numberTest=0;
+        
         /* 
         algorithm();
         System.out.println(carpma(10, 20));*/
@@ -19,13 +19,18 @@ public class App {
 
          //Polidrom Number finder calling
          /*
+        int numberTest=0;
         numberTest = tScanner.nextInt();
         System.out.println(isPolindrom(numberTest));
         tScanner.close(); */
 
+        // Fibonacci as recursive
+        /*
         int fiboNumber =0;
         fiboNumber = tScanner.nextInt();
-        System.out.println(fiboFunction(fiboNumber));
+        System.out.println(fiboFunction(fiboNumber)); */
+
+        
 
     }
     /*
@@ -72,7 +77,8 @@ public class App {
     } 
     
    }*/
-
+    // Fibonacci as recursive
+    /*
    static int fiboFunction(int x){
     
     if (x == 1 || x == 2){
@@ -82,5 +88,5 @@ public class App {
     
     return fiboFunction(x-1) + fiboFunction(x-2);
    }
-
+*/
 }
