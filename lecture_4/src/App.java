@@ -29,9 +29,16 @@ public class App {
         int fiboNumber =0;
         fiboNumber = tScanner.nextInt();
         System.out.println(fiboFunction(fiboNumber)); */
-
         
+        // Prime number checker
+        /*
+        int stdNumber = 0;
+        stdNumber = tScanner.nextInt();
+        System.out.println(isPrimeNumber(stdNumber));
+         */
 
+
+         
     }
     /*
     static int carpma(int numberA,int numberB){
@@ -89,4 +96,14 @@ public class App {
     return fiboFunction(x-1) + fiboFunction(x-2);
    }
 */
+    // Prime number checker
+    /*
+    static boolean isPrimeNumber(int stdInput){
+        if(stdInput %2 == 0 || stdInput%3 == 0 || stdInput %5 == 0 || stdInput % 7 == 0){
+            return false; 
+        }
+        else{
+            return true;
+        }
+    } */
 }
