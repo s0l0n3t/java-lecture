@@ -38,6 +38,9 @@ public class App {
         stdNumber = tScanner.nextInt();
         System.out.println(isPrimeNumber(stdNumber));
          */
+
+         // Recursive pattern algoritm
+         /*
         int selectNumber = 0;
         
         int count = 0;
@@ -48,7 +51,10 @@ public class App {
         
         
         tScanner.close();
-         
+          */
+
+
+          
     }
     /*
     static int carpma(int numberA,int numberB){
@@ -116,6 +122,9 @@ public class App {
             return true;
         }
     } */
+
+    // recursive pattern algoritm
+    /* 
    static int pattern(int x){
     if(x <= 0){
         return x;
@@ -131,5 +140,5 @@ public class App {
         return sum(x+5, y);
     }
     return x;
-   }
+   }*/
 }
