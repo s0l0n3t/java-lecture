@@ -1,18 +1,16 @@
-## Getting Started
+# Salary Calculator Application
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+This project has been created for patika.dev Java homework.
 
-## Folder Structure
+## Output
+![github](/output.png)
 
-The workspace contains two folders by default, where:
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+### Needed
+![github](/needed-output.png)
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+> What they want has been completed.
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+> Employee class created.
 
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+> Object added named ahmet.
