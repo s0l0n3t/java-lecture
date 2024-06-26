@@ -3,11 +3,11 @@
 This project has been created for patika.dev Java homework.
 
 ## Output
-![github](/output.png)
+![github](/salary-calculator/output.png)
 
 
 ### Needed
-![github](/needed-output.png)
+![github](/salary-calculator/needed-output.png)
 
 > What they want has been completed.
 
