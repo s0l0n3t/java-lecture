@@ -177,8 +177,37 @@ public class App {
             System.out.println(arraySort(arrayNew)[j]);
         }
          */
-        
 
+
+         /*
+        //Hackerrank Challange for silver 
+        int first=0;
+        double sec;
+        
+        Scanner fiScanner = new Scanner(System.in);
+        
+        first = fiScanner.nextInt();
+        sec = fiScanner.nextDouble();
+        String thirdS = fiScanner.nextLine();
+        String thirdS1 = fiScanner.nextLine();
+
+        System.out.println("String: "+thirdS1);
+        System.out.println("Double: "+sec);
+        System.out.println("Int: "+first); */
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
     }
 
     /*
