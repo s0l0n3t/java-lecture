@@ -61,13 +61,6 @@ public class App {
             System.out.println(s);
         }
 
-
-        int[] arrayInteger = {2,4,7,5,3,4,5,1,2};
-        System.out.print("Min: ");
-        System.out.println(arrayMax(arrayInteger));
-
-        System.out.print("Max: ");
-        System.out.println(arrayMin(arrayInteger));
         
         /*
         //Homework for patikadev #1 #Arrays
@@ -78,8 +71,15 @@ public class App {
         }
         System.out.println("Ortalama: "+ summ/arrayOrt.length);
          */
+        /*
+        //Homework for patikadev #2 #Arrays
+        int[] arrayInteger = {2,4,7,5,3,4,5,1,2};
+        System.out.print("Min: ");
+        System.out.println(arrayMax(arrayInteger));
 
-
+        System.out.print("Max: ");
+        System.out.println(arrayMin(arrayInteger));
+         */
 
 
 
@@ -103,13 +103,46 @@ public class App {
          // 2 2
            // 3 */
 
+        /*
+        //Homework patikadev #3 #arrays
+        int[][] arrayMultiA = {
+            {1,2,3,4,5,6},
+            {1,2,3,4,5,6},
+            {1,2,3,4,5,6},
+            {1,2,3,4,5,6},
+        };
+
+        for(int i = 0;i< arrayMultiA.length;i++){
+            for(int j = 0;j < arrayMultiA[i].length; j++){
+                
+                
+                if(i == 0 || i == 2 || j == 5){
+                    arrayMultiA[i][j] = 1;
+                }
+
+            }
+            
+        }
+
+        System.out.println();
+        for(int i = 0;i< arrayMultiA.length;i++){
+            for(int j = 0;j < arrayMultiA[i].length; j++){
+                
+                System.out.print(arrayMultiA[i][j]+ " ");
+            }
+            System.out.println();
+            
+        } */
+
+
+
 
 
 
 
     }
-
-
+    /*
+    //Homework for patikadev #2 #Arrays
     static int arrayMax(int[] array){
         int max=0;
         for(int i=0;i<array.length;i++){
@@ -122,7 +155,6 @@ public class App {
         
         return max;
     }
-
     static int arrayMin(int[] array){
         int min = 50000;
         for(int i = 0;i<array.length;i++){
@@ -131,7 +163,7 @@ public class App {
             }
         }
         return min;
-    }
+    } */
 
     /*
     static void arrayPrinter(int[] arrayPrinter){
