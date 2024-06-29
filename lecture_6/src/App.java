@@ -134,13 +134,34 @@ public class App {
             
         } */
 
-
-
-
+        //Homework patikadev #4 #Arrays
+        int[] arrayRepeat = {1,2,2,4,5,6,1,1,1,1,1,2,3,4,5,6,7,8,8};
+        int[] repetitive = new int[arrayRepeat.length/2];
+        int start = 0;
+        for(int i = 0; i< arrayRepeat.length;i++){
+            for(int j = 0;j<arrayRepeat.length;j++){
+                if((i != j) && arrayRepeat[i] == arrayRepeat[j]){
+                    if(!isFind(repetitive, arrayRepeat[i])){
+                        repetitive[start++] = arrayRepeat[i];
+                    }
+                    break;
+                }
+            }
+            
+            
+        }
+        for(int k = 0 ; k< repetitive.length;k++){
+            System.out.print("REPEAT NUMBERS: ");
+            System.out.println(repetitive[k]);
+        }
 
 
 
     }
+
+
+    
+
     /*
     //Homework for patikadev #2 #Arrays
     static int arrayMax(int[] array){
@@ -164,6 +185,16 @@ public class App {
         }
         return min;
     } */
+
+    //Homework patikadev #4 #Arrays
+    static boolean isFind(int[] arr, int value){
+        for(int i = 0;i<arr.length;i++){
+            if (arr[i] == value){
+                return true;
+            }
+        }
+        return false;
+    } 
 
     /*
     static void arrayPrinter(int[] arrayPrinter){
