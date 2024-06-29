@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -134,6 +135,7 @@ public class App {
             
         } */
 
+        /*
         //Homework patikadev #4 #Arrays
         int[] arrayRepeat = {1,2,2,4,5,6,1,1,1,1,1,2,3,4,5,6,7,8,8};
         int[] repetitive = new int[arrayRepeat.length/2];
@@ -153,14 +155,49 @@ public class App {
         for(int k = 0 ; k< repetitive.length;k++){
             System.out.print("REPEAT NUMBERS: ");
             System.out.println(repetitive[k]);
+        } */
+
+        
+        /*
+        //Homework patikadev #5 #Arrays
+        Scanner arrayScanner = new Scanner(System.in);
+        int integerArray=0;
+        System.out.print("Dizinin Boyutu: ");
+        integerArray = arrayScanner.nextInt();
+        int objectArray=0;
+
+        int[] arrayNew = new int[integerArray];
+        for(int i = 0; i< integerArray; i++){
+            System.out.println("Dizi elemanlarını giriniz: ");
+            arrayNew[i] = arrayScanner.nextInt();
+
         }
-
-
+        System.out.println("Sıralama: ");
+        for(int j =0;j< arraySort(arrayNew).length;j++){
+            System.out.println(arraySort(arrayNew)[j]);
+        }
+         */
+        
 
     }
 
-
-    
+    /*
+    //Homework patikadev #5 #Arrays
+    static int[] arraySort(int[] array){
+        int[] best = new int[array.length];
+        int start = 0;
+        for(int k = 0;k<array.length;k++){
+            for(int j =0;j<array.length;j++){
+                if(array[k] >= array[j]){
+                    best[start] = array[k];
+                    start++;
+                    break;
+                }
+            }
+        }
+        
+        return best;
+    } */
 
     /*
     //Homework for patikadev #2 #Arrays
@@ -185,7 +222,7 @@ public class App {
         }
         return min;
     } */
-
+    /*
     //Homework patikadev #4 #Arrays
     static boolean isFind(int[] arr, int value){
         for(int i = 0;i<arr.length;i++){
@@ -194,7 +231,7 @@ public class App {
             }
         }
         return false;
-    } 
+    }  */
 
     /*
     static void arrayPrinter(int[] arrayPrinter){
