@@ -60,8 +60,16 @@ public class App {
         for(String s : arrayString){
             System.out.println(s);
         }
-        
 
+
+        int[] arrayInteger = {2,4,7,5,3,4,5,1,2};
+        System.out.print("Min: ");
+        System.out.println(arrayMax(arrayInteger));
+
+        System.out.print("Max: ");
+        System.out.println(arrayMin(arrayInteger));
+        
+        /*
         //Homework for patikadev #1 #Arrays
         int[] arrayOrt = {3,5,1,4,7};
         int summ = 0;
@@ -69,6 +77,9 @@ public class App {
             summ += arrayOrt[x];
         }
         System.out.println("Ortalama: "+ summ/arrayOrt.length);
+         */
+
+
 
 
 
@@ -97,6 +108,31 @@ public class App {
 
 
     }
+
+
+    static int arrayMax(int[] array){
+        int max=0;
+        for(int i=0;i<array.length;i++){
+            if(max < array[i]){
+                max = array[i];
+                
+            }
+        }
+
+        
+        return max;
+    }
+
+    static int arrayMin(int[] array){
+        int min = 50000;
+        for(int i = 0;i<array.length;i++){
+            if(min > array[i]){
+                min = array[i];
+            }
+        }
+        return min;
+    }
+
     /*
     static void arrayPrinter(int[] arrayPrinter){
         for(int i = 0; i<arrayPrinter.length;i++){
