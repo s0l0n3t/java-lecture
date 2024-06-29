@@ -12,7 +12,7 @@ public class App {
             myArray[k] = arrayIn.nextInt();
             
         }
-        System.out.println("OUTPUT:");
+        
         for(int s = 0;s<myArray.length;s++){
             System.out.println(myArray[s]);
         }

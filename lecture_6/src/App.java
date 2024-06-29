@@ -194,9 +194,28 @@ public class App {
         System.out.println("String: "+thirdS1);
         System.out.println("Double: "+sec);
         System.out.println("Int: "+first); */
+    
 
 
 
+        
+        /*
+        //Homework for patikadev #6 #Arrays
+        int[] arrayInteger = {10,20,20,10,10,20,5,20};
+        int index = 0;
+
+        System.out.println("Tekrar sayıları: ");
+        for(int i = 0; i< arrayInteger.length; i++){
+            for(int k = 0; k<arrayInteger.length;k++){
+                if(arrayInteger[i] == arrayInteger[k]){
+                    index++;
+                }
+                
+            }
+            System.out.println(arrayInteger[i] + " Sayısı: "+index+ " Kez");
+            index = 0;
+        }
+ */
 
 
 
