@@ -8,7 +8,7 @@ public class App {
     public static void main(String[] args) throws Exception {
         Scanner arrayScanner = new Scanner(System.in);
         int queries = arrayScanner.nextInt();
-        int[][] numberTest = new int[1][queries];
+        
          // number - queries
         //queries şuanda number olarak kullanılıyor.
         
@@ -45,31 +45,51 @@ public class App {
                 for(int a = 0;a< arrayN[i];a++){
                     
                     numberTest1[a] = arrayScanner.nextInt();
-                }
+                }/*
                 System.out.println("OUTPUT: ");
         
                 System.out.println(Arrays.toString(numberTest1));
-
+ */
                 
-                if(numberTest1[index] == 0){
+                if(numberTest1[index+1] == 0){
                     index += 1;//Walk to 1
                     try{
-                        System.out.println(isTrue(index-1, numberTest1, arrayL, i));
+                        if(isTrue(index, numberTest1, arrayL, i)){
+                            numberStringTest[i] = "YES";
+                            
+                        }
+                        else{
+                            numberStringTest[i] = "NO";
+                        }
                     }
                     catch(Exception e){
-                        System.out.println("YES");
+                        numberStringTest[i] = "YES";
                     }
                     //Buradan devam ediliyor. Oyun algoritması yazılıp sonucu string dizisine yazılacak.
 
                 }
                 else{
-                    System.out.println("NO");// string array e yes gidecek.
+                    index -= 1;
+
+                    if(isTrue(index, numberTest1, arrayL, i)){
+                        numberStringTest[i] = "YES";
+                        
+                    }
+                    else{
+                        numberStringTest[i] = "NO";
+                        
+                    }
+                    // string array e yes gidecek.
                     //numberStringTest[i] = "YES";
                 }
 
             }
+            for(int a = 0;a<numberStringTest.length;a++){
+                System.out.println(numberStringTest[a]);
+            }
+
             
-            
+            /*
             for(int i = 0;i<queries;i++){
                 if(arrayN[i] >= 2 && arrayL[i] <= 100){
                     
@@ -99,7 +119,7 @@ public class App {
                     }
            
                 }
-            }
+            } */
                
             
         }
@@ -109,14 +129,13 @@ public class App {
     static boolean isTrue(int index,int[] numberTest1,int[] arrayL,int i){
             
             if(index + arrayL[i] > numberTest1.length){
-                System.out.println("YES");// string array e yes gidecek. //OYUN BİTTİ
+                // string array e yes gidecek. //OYUN BİTTİ
                 //numberStringTest[i] = "YES";
                 return true;
                 
             }
             index += arrayL[i];
             if(numberTest1[index] == 0){
-
 
                 return isTrue(index, numberTest1, arrayL, i);
             }
