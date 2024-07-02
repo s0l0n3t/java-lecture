@@ -83,6 +83,10 @@ public class App {
         System.out.println(varString.contains("r"));//Belirtilen karakter string içerisinde kapsıyor mu? Çıktı: TRUE || FALSE
         System.out.println(varString.isEmpty()); //Değişken dolu veya boş olduğunun çıktısı elde edilir.
 
+
+
+
+        /*
         // Find the numbers game
         Scanner lastScanner = new Scanner(System.in);
         boolean isTrue = false;
@@ -98,6 +102,25 @@ public class App {
             System.out.println("Sayı: "+randomNumber);
         }
         }
+
+         */
+
+
+
+        /*
+        // Polindromik kelime bulma: 287
+        int count = 0,base = 0;
+        System.out.println();
+        Scanner vScanner = new Scanner(System.in);
+        String vaString = vScanner.nextLine();
+        
+        if(isPolindrome(vaString))
+            System.out.println("Polindromik");
+        else
+            System.out.println("Polindromik değil !");*/
+
+            
+ 
         /*
         //Homework for patikadev #1 #Arrays
         int[] arrayOrt = {3,5,1,4,7};
@@ -263,6 +286,17 @@ public class App {
 
         
     }
+    /*
+    //Polindromik sayı bulma
+    static boolean isPolindrome(String vaString){
+        for(int i = 0,j = vaString.length()-1;i < j;i++,j--){
+            if(vaString.charAt(i) != vaString.charAt(j)){
+                return false;
+            }
+        }
+
+        return true;
+    } */
 
     /*
     //Homework patikadev #5 #Arrays
