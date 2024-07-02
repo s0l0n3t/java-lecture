@@ -12,7 +12,6 @@ public class App {
         arrayNumber[i]=input.nextInt();
 
     }
-
     for(int i=0;i<n;i++)
     {   
         for(int j=0;i+j<arrayNumber.length;j++)
@@ -26,13 +25,5 @@ public class App {
         }
     }
     System.out.println(count);
-
-
-        
-
-
-
     }
-
-
 }

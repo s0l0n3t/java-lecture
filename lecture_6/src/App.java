@@ -1,5 +1,7 @@
+import java.security.cert.TrustAnchor;
 import java.util.Arrays;
 import java.util.Scanner;
+;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -62,7 +64,40 @@ public class App {
             System.out.println(s);
         }
 
+        //MATH CLASS
+
+        System.out.println(Math.abs(-100)); //Mutlak deger.
+        System.out.println(Math.cbrt(27)); // küp kök
+        System.out.println(Math.ceil(21.12)); //En yakın tam sayıya yuvarlama.
+        System.out.println(Math.floor(1.21)); //En yakın tam sayı değeri fakat alt tam sayılar.
+        System.out.println(Math.pow(2, 3)); //2^3 üssel ifade çıktısı verir.
+        System.out.println(Math.sqrt(16)); //Karekök.
+
+        //String CLASS
+
+        String varString = "Furkan";
+        System.out.println(varString.charAt(2)); //Stringdeki index numarasına göre karakter elde etmek.
+        char b = 'b';
+        System.out.println(varString.codePointAt(2)); // R karakterinin karakter kodu.
+        System.out.println(varString.concat(" Selam")); //String sonuna ekleme yapmak.
+        System.out.println(varString.contains("r"));//Belirtilen karakter string içerisinde kapsıyor mu? Çıktı: TRUE || FALSE
+        System.out.println(varString.isEmpty()); //Değişken dolu veya boş olduğunun çıktısı elde edilir.
+
+        // Find the numbers game
+        Scanner lastScanner = new Scanner(System.in);
+        boolean isTrue = false;
+        while(isTrue == false){
+        int randomNumber = (int)(Math.random()*10);
         
+        int lastNumber = lastScanner.nextInt();
+
+        if(randomNumber == lastNumber){
+            isTrue = true;
+            System.out.println("Tebrikler !");}
+        else{
+            System.out.println("Sayı: "+randomNumber);
+        }
+        }
         /*
         //Homework for patikadev #1 #Arrays
         int[] arrayOrt = {3,5,1,4,7};
