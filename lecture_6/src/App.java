@@ -83,7 +83,9 @@ public class App {
         System.out.println(varString.contains("r"));//Belirtilen karakter string içerisinde kapsıyor mu? Çıktı: TRUE || FALSE
         System.out.println(varString.isEmpty()); //Değişken dolu veya boş olduğunun çıktısı elde edilir.
 
+        int a = 4; 
 
+        System.out.print((a >> 1)+(a << 2) );
 
 
         /*
