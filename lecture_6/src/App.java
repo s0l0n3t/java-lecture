@@ -4,6 +4,10 @@ import java.util.Scanner;
 ;
 
 public class App {
+
+    private String name; //sadece App sınıfında kullanılabilmektedir.
+    protected String sirname; // sadece packageda kullanılabilir.
+    public int number; // her sınıf kullanabilmektedir.
     public static void main(String[] args) throws Exception {
         /*
         int[] arrayTest = new int[10];
@@ -30,6 +34,7 @@ public class App {
         arrayPrinter(arrayTest2);
         arrayReverse(arrayTest2);
         */
+        
 
         
         int[] list1 = new int[5];

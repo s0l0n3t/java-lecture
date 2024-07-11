@@ -15,6 +15,15 @@ public class App {
         bmw.price = 25000;*/
         audi.increasePrice(1500);
         System.out.println(audi.price);
+
+
+        //Inheritance
+        extendedClassInheritance inheritance = new extendedClassInheritance();
+        inheritance.setName("Furkan");
+        inheritance.setSirname("TOKGOZ");
+        System.out.println(inheritance.getName());
+        System.out.println(inheritance.getSirname());
+
     }
 }
 
