@@ -1,17 +1,17 @@
 public class Atlar extends Hayvanlar {
     
     public Atlar(int age,int agirlik){
-        this.setClassName("Atlar");
-        this.setAge(age);
-        this.setAgirlik(agirlik);
+        super.setClassName("Atlar");
+        super.setAge(age);
+        super.setAgirlik(agirlik);
     }
     @Override
     public void getDosage(){
         System.out.print("At için doz: ");
-        System.out.println((getAge()*100)*getAgirlik());
+        System.out.println((super.getAge()*100)*super.getAgirlik());
     }
     @Override
     public void getFeedSchedule(){
-        System.out.println(this.getClassName()+ " için beslenme sabah ve akşam");
+        System.out.println(super.getClassName()+ " için beslenme sabah ve akşam");
     }
 }
