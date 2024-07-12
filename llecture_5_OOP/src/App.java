@@ -23,8 +23,10 @@ public class App {
         inheritance.setSirname("TOKGOZ");
         System.out.println(inheritance.getName());
         System.out.println(inheritance.getSirname());
+        inheritance.eatFood();
 
     }
+    
 }
 
 
