@@ -83,7 +83,7 @@ public class App {
             HttpURLConnection apiConnection = fetchApiResponse(url);
 
             
-            // 200 - means that the connection was a success
+           
             if(apiConnection.getResponseCode() != 200){
                 System.out.println("HATA: Api bağlanılamadı !");
                 return;
