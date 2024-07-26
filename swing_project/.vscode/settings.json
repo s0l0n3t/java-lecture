@@ -1,0 +1,16 @@
+{
+    "java.project.sourcePaths": [
+        "src",
+        "lib"
+    ],
+    "java.project.outputPath": "bin",
+    "java.project.referencedLibraries": {
+        "include": [
+            "lib/**/*.jar",
+            "c:\\Users\\Administrator\\Downloads\\mysql-connector-j-9.0.0\\mysql-connector-j-9.0.0.jar"
+        ],
+        "exclude": [
+            "c:\\Users\\Administrator\\Downloads\\javafx-sdk-22.0.2\\lib\\javafx-swt.jar"
+        ]
+    }
+}
