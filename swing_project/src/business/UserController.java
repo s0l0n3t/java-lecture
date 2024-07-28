@@ -1,6 +1,7 @@
 package business;
 
 import core.helper;
+import dao.CustomerDao;
 import dao.UserDao;
 import entity.User;
 
