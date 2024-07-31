@@ -30,7 +30,7 @@ public class Dashboard extends JFrame{
     private final User user;
     private final CustomerController customerController;
     private DefaultTableModel customerTable = new DefaultTableModel();
-    private boolean optionSearch = false;
+
 
 
     public Dashboard(User user){//identified.
@@ -69,17 +69,13 @@ public class Dashboard extends JFrame{
                             System.out.println(searchCustomer);
 
                         }
-                        else if(text_search.getText().trim().isEmpty()){
+                        if(text_search.getText().trim().isEmpty()){
                             loadTable(null);
                         }
-                        else if(!customerTable.getValueAt(i,1).toString().equals(text_search.getText().toString())){
-                            this.optionSearch = true;
-                        }
+
+
                     }
-            if(this.optionSearch == true){//Hatayı çözemedim. hata aldıktan sonra arama doğru da olsa hata vermekte.
-                JOptionPane.showMessageDialog(null,"Böyle bir müşteri bulunmamaktadır.","Hata", JOptionPane.ERROR_MESSAGE);
-                this.optionSearch = false;
-            }
+
 
         });
 
@@ -94,6 +90,12 @@ public class Dashboard extends JFrame{
         });
         loadTable(null);
 
+        btn_newCustomer.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                CreateCustomerWindow createCustomerWindow = new CreateCustomerWindow();
+            }
+        });
     }
 
     private void loadTable(ArrayList<Customer> customers){
