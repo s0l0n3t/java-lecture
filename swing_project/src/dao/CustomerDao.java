@@ -18,6 +18,26 @@ public class CustomerDao {
     public CustomerDao(){
         this.connection = Database.getInstance();
     }
+    //Find by id
+    public Customer getById(int id){
+        Customer customer = new Customer();
+        String sqlQuery = "SELECT * FROM customer WHERE id = ?";
+        try {
+            PreparedStatement preparedStatement = this.connection.prepareStatement(sqlQuery);
+            preparedStatement.setInt(1,id);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            if(resultSet.next()){
+                customer = this.matchDB(resultSet);
+            }
+
+
+        }
+        catch (Exception exception){
+            JOptionPane.showMessageDialog(null,exception.getMessage(),"Hata",JOptionPane.WARNING_MESSAGE);//print error message.
+        }
+        return customer;
+
+    }
 
     public ArrayList<Customer> findCustomer(){
         ArrayList<Customer> customers = new ArrayList<>();

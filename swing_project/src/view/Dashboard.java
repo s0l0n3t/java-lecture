@@ -96,6 +96,14 @@ public class Dashboard extends JFrame{
                 CreateCustomerWindow createCustomerWindow = new CreateCustomerWindow();
             }
         });
+        //RESET button event
+        btn_reset.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                loadTable(null);
+                text_search.setText(null);
+            }
+        });
     }
 
     private void loadTable(ArrayList<Customer> customers){

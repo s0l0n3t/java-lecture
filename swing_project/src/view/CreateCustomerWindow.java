@@ -50,6 +50,7 @@ public class CreateCustomerWindow extends JFrame{
         });
     }
 
+
     private void setCustomerObject(CustomerAddController customerAddController){
         JTextField[] textArray = {this.text_Name,this.text_Address,this.text_Mail,this.text_Phone};
         if(!helper.isEmptyArrayEmpty(textArray)){

@@ -12,4 +12,8 @@ public class CustomerController {
     public ArrayList<Customer> findCustomer(){
        return this.customerDao.findCustomer();
     }
+    public Customer findById(int id){
+        return this.customerDao.getById(id);
+    }
+
 }
