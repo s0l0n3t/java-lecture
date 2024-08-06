@@ -1,19 +1,16 @@
 package view;
 
 import business.CustomerController;
+import business.ProductController;
 import entity.Customer;
+import entity.Product;
 import entity.User;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.KeyAdapter;
-import java.awt.event.KeyEvent;
-import java.security.Key;
+import java.awt.event.*;
 import java.util.ArrayList;
-import java.util.Objects;
 
 public class Dashboard extends JFrame{
     private JPanel container;
@@ -27,14 +24,25 @@ public class Dashboard extends JFrame{
     private JButton btn_search;
     private JButton btn_reset;
     private JButton btn_newCustomer;
+    private JPanel pnl_product;
+    private JPanel pnl_customers;
+    private JScrollPane scrl_product;
+    private JTable tbl_product;
+    private JTextField text_searchproduct;
+    private JButton btn_searchproduct;
+    private JButton btn_resetproduct;
+    private JButton btn_addProduct;
     private final User user;
     private final CustomerController customerController;
     private DefaultTableModel customerTable = new DefaultTableModel();
+    private DefaultTableModel productTable = new DefaultTableModel();
+    private final ProductController productController;
 
 
 
     public Dashboard(User user){//identified.
         this.user = user;
+        this.productController = new ProductController();
         this.customerController = new CustomerController();
         if(user == null) JOptionPane.showMessageDialog(null,"Kullanıcı yok !","Hata",JOptionPane.WARNING_MESSAGE);
         this.label_welcome.setText("Hoşgeldiniz "+user.getName());
@@ -46,10 +54,11 @@ public class Dashboard extends JFrame{
         this.setLocation(x,y);
         this.setResizable(false);//resizable function
         this.setVisible(true);
-        btn_exit.addActionListener(e -> {
-            dispose();
-            mainForm mainForm = new mainForm();//Exit button working
 
+//EXIT Button
+        btn_exit.addActionListener(e -> {
+            this.dispose();
+            mainForm mainForm = new mainForm();
         });
 
         btn_search.addActionListener(e -> {
@@ -72,13 +81,8 @@ public class Dashboard extends JFrame{
                         if(text_search.getText().trim().isEmpty()){
                             loadTable(null);
                         }
-
-
                     }
-
-
         });
-
 
         text_search.addKeyListener(new KeyAdapter() {
             @Override
@@ -89,33 +93,54 @@ public class Dashboard extends JFrame{
             }
         });
         loadTable(null);
+        loadProductTable(null);
 
-        btn_newCustomer.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                CreateCustomerWindow createCustomerWindow = new CreateCustomerWindow();
-            }
+        btn_newCustomer.addActionListener(e -> {
+            CreateCustomerWindow createCustomerWindow = new CreateCustomerWindow();
         });
-        //RESET button event
-        btn_reset.addActionListener(new ActionListener() {
+//RESET button event
+        btn_reset.addActionListener(e -> {
+            loadTable(null);
+            text_search.setText(null);
+        });
+        btn_searchproduct.addActionListener(e -> {
+            System.out.println(productController.searchProductByName(text_searchproduct.getText()));
+            System.out.println(productController.findProducts());
+
+            if(!text_searchproduct.getText().isEmpty()){
+                loadProductTable(productController.searchProductByName(text_searchproduct.getText().toLowerCase()));
+            }
+            else{
+                loadProductTable(null);
+            }
+
+//SEARCH product button event
+        });
+//RESET product button event
+        btn_resetproduct.addActionListener(e -> {
+            loadProductTable(null);
+            text_searchproduct.setText(null);
+        });
+        btn_addProduct.addActionListener(e -> {
+            CreateProductWindow productWindow = new CreateProductWindow();
+        });
+        text_searchproduct.addKeyListener(new KeyAdapter() {
             @Override
-            public void actionPerformed(ActionEvent e) {
-                loadTable(null);
-                text_search.setText(null);
+            public void keyPressed(KeyEvent e) {
+                if (e.getKeyCode()==KeyEvent.VK_ENTER){
+                    btn_searchproduct.doClick();
+                }
             }
         });
     }
-
     private void loadTable(ArrayList<Customer> customers){
         Object[] columnTable = {"ID","Customer Name","Type","Mobile Phone","E-mail","Address"};
         if(customers == null){
             customers = this.customerController.findCustomer();
         }
-        //Clear Table
+//Clear Table
         DefaultTableModel clearModel = (DefaultTableModel) this.tbl_customer.getModel();
         clearModel.setRowCount(0);
-
-
         this.customerTable.setColumnIdentifiers(columnTable);
         for(Customer customer: customers){
             Object[] rowObject = {
@@ -132,8 +157,29 @@ public class Dashboard extends JFrame{
         this.tbl_customer.getTableHeader().setReorderingAllowed(false);
         this.tbl_customer.getColumnModel().getColumn(0).setMaxWidth(50);
         this.tbl_customer.setEnabled(false);
-
     }
-
-
+    private void loadProductTable(ArrayList<Product> products){
+        Object[] columnNames = {"id","name","code","price","stock"};
+        if(products == null){
+            products = this.productController.findProducts();
+        }
+//Clear Table
+        DefaultTableModel clearModel = (DefaultTableModel) this.tbl_product.getModel();
+        clearModel.setRowCount(0);
+        this.productTable.setColumnIdentifiers(columnNames);
+        for(Product product: products){
+            Object[] rowObject = {
+                    product.getId(),
+                    product.getName(),
+                    product.getCode(),
+                    product.getPrice(),
+                    product.getStock()
+            };
+            this.productTable.addRow(rowObject);
+        }
+        this.tbl_product.setModel(productTable);
+        this.tbl_product.getTableHeader().setReorderingAllowed(false);
+        this.tbl_product.getColumnModel().getColumn(0).setMaxWidth(50);
+        this.tbl_product.setEnabled(false);
+    }
 }

@@ -30,11 +30,9 @@ public class CustomerAddDao {
             preparedStatement.setString(4,mail);
             preparedStatement.setString(5,address);
             preparedStatement.executeUpdate();
-
         }
-        catch (Exception e){
-            JOptionPane.showMessageDialog(null,e.getMessage(),"Hata",JOptionPane.WARNING_MESSAGE);//print error message.
-
+        catch (Exception exception){
+            JOptionPane.showMessageDialog(null,exception.getMessage(),"Hata",JOptionPane.WARNING_MESSAGE);
         }
         return customerObject;
 

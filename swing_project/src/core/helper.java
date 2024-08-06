@@ -51,11 +51,13 @@ public class helper {
         catch (ArrayIndexOutOfBoundsException e){//If parse array is null.
             return false;
         }
-
-
         return true;
 
 
 
+    }
+//WARNING Error Dialog
+    public static int warningSure(){
+        return JOptionPane.showConfirmDialog(null, "Çıkmak istediğinize emin misiniz ?", "Warning", JOptionPane.YES_NO_OPTION);
     }
 }

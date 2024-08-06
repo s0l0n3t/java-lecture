@@ -36,14 +36,13 @@ public class CreateCustomerWindow extends JFrame{
         this.setVisible(true);
         this.comboBox_Type.addItem("PERSON");
         this.comboBox_Type.addItem("COMPANY");
-        //Max limit for phonetext
+
 
         btn_Create.addActionListener(e -> {
             setCustomerObject(customerAddController);
         });
         btn_Cancel.addActionListener(e -> {
-            int warning =JOptionPane.showConfirmDialog(null, "Çıkmak istediğinize emin misiniz ?", "Warning", JOptionPane.YES_NO_OPTION);
-            if (warning == 0){
+            if (helper.warningSure() == 0){
                 this.dispose();
 
             }

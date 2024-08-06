@@ -46,8 +46,8 @@
         <properties/>
         <border type="none"/>
         <children>
-          <grid id="ab890" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
-            <margin top="0" left="0" bottom="0" right="0"/>
+          <grid id="ab890" binding="pnl_customers" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="5" left="5" bottom="5" right="5"/>
             <constraints>
               <tabbedpane title="Customers"/>
             </constraints>
@@ -119,6 +119,69 @@
                   </component>
                 </children>
               </grid>
+            </children>
+          </grid>
+          <grid id="39d0e" binding="pnl_product" layout-manager="GridLayoutManager" row-count="4" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="5" left="5" bottom="5" right="5"/>
+            <constraints>
+              <tabbedpane title="Product"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <scrollpane id="569f5" binding="scrl_product">
+                <constraints>
+                  <grid row="2" column="0" row-span="1" col-span="2" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <component id="ac4f2" class="javax.swing.JTable" binding="tbl_product">
+                    <constraints/>
+                    <properties/>
+                  </component>
+                </children>
+              </scrollpane>
+              <component id="43708" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Product Name"/>
+                </properties>
+              </component>
+              <component id="e096b" class="javax.swing.JTextField" binding="text_searchproduct">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="-1"/>
+                  </grid>
+                </constraints>
+                <properties/>
+              </component>
+              <component id="81807" class="javax.swing.JButton" binding="btn_searchproduct">
+                <constraints>
+                  <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Search"/>
+                </properties>
+              </component>
+              <component id="50ac3" class="javax.swing.JButton" binding="btn_resetproduct">
+                <constraints>
+                  <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Reset"/>
+                </properties>
+              </component>
+              <component id="4c476" class="javax.swing.JButton" binding="btn_addProduct">
+                <constraints>
+                  <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Add Product"/>
+                </properties>
+              </component>
             </children>
           </grid>
         </children>
