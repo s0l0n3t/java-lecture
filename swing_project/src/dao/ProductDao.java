@@ -1,6 +1,7 @@
 package dao;
 
 import core.Database;
+import core.helper;
 import entity.Product;
 
 import javax.imageio.plugins.jpeg.JPEGImageReadParam;
@@ -31,7 +32,7 @@ public class ProductDao {
             }
         }
         catch (Exception exception){
-            JOptionPane.showMessageDialog(null,exception.getMessage(),"Hata",JOptionPane.WARNING_MESSAGE);
+            helper.dbError(exception);
         }
         return product;
     }
@@ -46,7 +47,7 @@ public class ProductDao {
             }
         }
         catch (Exception exception){
-            JOptionPane.showMessageDialog(null,exception.getMessage(),"Hata",JOptionPane.WARNING_MESSAGE);
+            helper.dbError(exception);
         }
         return products;
     }
@@ -62,7 +63,7 @@ public class ProductDao {
 //Add product
     public Product createProduct(String name,String code,int price,int stock){
         Product product = new Product();
-        String sqlQuery = "INSERT INTO customer " +
+        String sqlQuery = "INSERT INTO product " +
                 "(name," +
                 " code," +
                 " price," +
@@ -77,7 +78,7 @@ public class ProductDao {
             preparedStatement.executeUpdate();
         }
         catch (Exception exception){
-            JOptionPane.showMessageDialog(null,exception.getMessage(),"Hata",JOptionPane.WARNING_MESSAGE);
+            helper.dbError(exception);
         }
         return product;
     }

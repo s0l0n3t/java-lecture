@@ -1,6 +1,7 @@
 package dao;
 
 import core.Database;
+import core.helper;
 import entity.Customer;
 import entity.User;
 
@@ -18,7 +19,7 @@ public class CustomerDao {
     public CustomerDao(){
         this.connection = Database.getInstance();
     }
-    //Find by id
+//SEARCH by id from DB
     public Customer getById(int id){
         Customer customer = new Customer();
         String sqlQuery = "SELECT * FROM customer WHERE id = ?";
@@ -29,14 +30,11 @@ public class CustomerDao {
             if(resultSet.next()){
                 customer = this.matchDB(resultSet);
             }
-
-
         }
         catch (Exception exception){
-            JOptionPane.showMessageDialog(null,exception.getMessage(),"Hata",JOptionPane.WARNING_MESSAGE);//print error message.
+            helper.dbError(exception);
         }
         return customer;
-
     }
 
     public ArrayList<Customer> findCustomer(){
@@ -49,13 +47,13 @@ public class CustomerDao {
                 customers.add(this.matchDB(resultSet));
             }
         }
-        catch (Exception e){
-            JOptionPane.showMessageDialog(null,e.getMessage(),"Hata",JOptionPane.WARNING_MESSAGE);//print error message.
-
+        catch (Exception exception){
+            helper.dbError(exception);
         }
         return customers;
 
     }
+//DB matcher
     public Customer matchDB(ResultSet resultSet) throws SQLException {
         Customer customer = new Customer();
         customer.setId(resultSet.getInt("id"));
@@ -64,8 +62,31 @@ public class CustomerDao {
         customer.setAddress(resultSet.getString("address"));
         customer.setPhone(resultSet.getString("phone"));
         customer.setType(Customer.TYPE.valueOf(resultSet.getString("type")));
-
         return customer;
+
+    }
+//ADD Customer Method
+    public Customer addCustomer(String name, Customer.TYPE type,String phone,String mail,String address){
+        Customer customerObject = new Customer();
+        String sqlQuery = "INSERT INTO customer (name," +
+                " type, " +
+                " phone," +
+                " mail," +
+                " address)"
+                + " VALUES (?, ?, ?, ?, ?)";
+        try {
+            PreparedStatement preparedStatement = this.connection.prepareStatement(sqlQuery);
+            preparedStatement.setString(1,name);
+            preparedStatement.setString(2,type.toString());
+            preparedStatement.setString(3,phone);
+            preparedStatement.setString(4,mail);
+            preparedStatement.setString(5,address);
+            preparedStatement.executeUpdate();
+        }
+        catch (Exception exception){
+            helper.dbError(exception);
+        }
+        return customerObject;
 
     }
 

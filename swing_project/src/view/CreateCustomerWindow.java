@@ -1,14 +1,10 @@
 package view;
 
-import business.CustomerAddController;
+import business.CustomerController;
 import core.helper;
 import entity.Customer;
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.KeyAdapter;
-import java.awt.event.KeyEvent;
 
 public class CreateCustomerWindow extends JFrame{
     private JPanel container;
@@ -19,12 +15,12 @@ public class CreateCustomerWindow extends JFrame{
     private JTextField text_Address;
     private JButton btn_Create;
     private JButton btn_Cancel;
-    private final CustomerAddController customerAddController;
+    private final CustomerController customerController;
     private final Customer customer;
     private Customer.TYPE comboBox_Object;
 
     public CreateCustomerWindow(){
-        this.customerAddController = new CustomerAddController();
+        this.customerController = new CustomerController();
         this.customer = new Customer();
         this.add(container);
         this.setTitle("Customer Creating Form");
@@ -39,31 +35,30 @@ public class CreateCustomerWindow extends JFrame{
 
 
         btn_Create.addActionListener(e -> {
-            setCustomerObject(customerAddController);
+            setCustomerObject(customerController);
         });
         btn_Cancel.addActionListener(e -> {
             if (helper.warningSure() == 0){
                 this.dispose();
-
             }
         });
     }
 
 
-    private void setCustomerObject(CustomerAddController customerAddController){
+    private void setCustomerObject(CustomerController customerController){
         JTextField[] textArray = {this.text_Name,this.text_Address,this.text_Mail,this.text_Phone};
         if(!helper.isEmptyArrayEmpty(textArray)){
             if(this.comboBox_Type.getSelectedItem().equals("PERSON")){
                 comboBox_Object = Customer.TYPE.PERSON;
-                System.out.println(comboBox_Type.toString());
             }
             else{
                 comboBox_Object = Customer.TYPE.COMPANY;
             }
-            customerAddController.addCustomer(this.text_Name.getText(),this.comboBox_Object,this.text_Phone.getText(),this.text_Mail.getText(),this.text_Address.getText());
+            customerController.addCustomer(this.text_Name.getText(),this.comboBox_Object,this.text_Phone.getText(),this.text_Mail.getText(),this.text_Address.getText());
+            helper.loginSuccessful(helper.CREATETYPE.CUSTOMER);
         }
         else {
-            JOptionPane.showMessageDialog(null,"Lütfen boş bırakmayınız !","Hata",JOptionPane.WARNING_MESSAGE);
+           helper.emptyTextBox();
         }
     }
 }

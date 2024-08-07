@@ -30,7 +30,7 @@ public class Dashboard extends JFrame{
     private JTable tbl_product;
     private JTextField text_searchproduct;
     private JButton btn_searchproduct;
-    private JButton btn_resetproduct;
+    private JButton btn_resetProduct;
     private JButton btn_addProduct;
     private final User user;
     private final CustomerController customerController;
@@ -103,6 +103,7 @@ public class Dashboard extends JFrame{
             loadTable(null);
             text_search.setText(null);
         });
+        //SEARCH product button event
         btn_searchproduct.addActionListener(e -> {
             System.out.println(productController.searchProductByName(text_searchproduct.getText()));
             System.out.println(productController.findProducts());
@@ -114,10 +115,10 @@ public class Dashboard extends JFrame{
                 loadProductTable(null);
             }
 
-//SEARCH product button event
+
         });
-//RESET product button event
-        btn_resetproduct.addActionListener(e -> {
+        //RESET product button event
+        btn_resetProduct.addActionListener(e -> {
             loadProductTable(null);
             text_searchproduct.setText(null);
         });
@@ -138,9 +139,10 @@ public class Dashboard extends JFrame{
         if(customers == null){
             customers = this.customerController.findCustomer();
         }
-//Clear Table
+        //Clear Table
         DefaultTableModel clearModel = (DefaultTableModel) this.tbl_customer.getModel();
         clearModel.setRowCount(0);
+
         this.customerTable.setColumnIdentifiers(columnTable);
         for(Customer customer: customers){
             Object[] rowObject = {
@@ -163,9 +165,10 @@ public class Dashboard extends JFrame{
         if(products == null){
             products = this.productController.findProducts();
         }
-//Clear Table
+        //Clear Table
         DefaultTableModel clearModel = (DefaultTableModel) this.tbl_product.getModel();
         clearModel.setRowCount(0);
+
         this.productTable.setColumnIdentifiers(columnNames);
         for(Product product: products){
             Object[] rowObject = {

@@ -26,7 +26,6 @@ public class helper {
         for(int x = 0;x< field.length;x++){
            if(isEmpty(field[x])) return true;
         }
-
         return false;
     }
     public static boolean isEmailValid(String inputEmail) {
@@ -52,12 +51,36 @@ public class helper {
             return false;
         }
         return true;
-
-
-
     }
+
+
 //WARNING Error Dialog
     public static int warningSure(){
         return JOptionPane.showConfirmDialog(null, "Çıkmak istediğinize emin misiniz ?", "Warning", JOptionPane.YES_NO_OPTION);
+    }
+//WARNING Empty Textbox
+    public static void emptyTextBox(){
+        JOptionPane.showMessageDialog(null,"Lütfen boş bırakmayınız !","Hata",JOptionPane.WARNING_MESSAGE);
+    }
+//WARNING Db Connection Error
+    public static void dbError(Exception exception){
+        JOptionPane.showMessageDialog(null,exception.getMessage(),"Hata",JOptionPane.WARNING_MESSAGE);
+    }
+//INFORMATION Error Dialog
+    public static void loginSuccessful(CREATETYPE createtype){
+        if(createtype.equals(CREATETYPE.CUSTOMER)){
+            JOptionPane.showMessageDialog(null, "Müşteri"+" eklendi","Başarılı !",JOptionPane.INFORMATION_MESSAGE);
+        }
+        if(createtype.equals(CREATETYPE.PRODUCT)){
+            JOptionPane.showMessageDialog(null, "Ürün"+" eklendi","Başarılı !",JOptionPane.INFORMATION_MESSAGE);
+        }
+        else {
+            System.out.println("Unknown creating type");
+        }
+    }
+//ENUM for Creating Type
+    public static enum CREATETYPE{
+        CUSTOMER,
+        PRODUCT
     }
 }

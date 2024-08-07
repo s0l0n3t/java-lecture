@@ -15,5 +15,8 @@ public class CustomerController {
     public Customer findById(int id){
         return this.customerDao.getById(id);
     }
+    public Customer addCustomer(String name, Customer.TYPE type,String phone,String mail,String address){
+        return this.customerDao.addCustomer(name,type,phone,mail,address);
+    }
 
 }
