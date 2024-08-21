@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Can_You_Access/Can_You_Access.iml" filepath="$PROJECT_DIR$/Can_You_Access/Can_You_Access.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Datatypes-challange/Datatypes-challange.iml" filepath="$PROJECT_DIR$/Datatypes-challange/Datatypes-challange.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EndofFile-challange/EndofFile-challange.iml" filepath="$PROJECT_DIR$/EndofFile-challange/EndofFile-challange.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java-1d-array_2/Java-1d-array_2.iml" filepath="$PROJECT_DIR$/Java-1d-array_2/Java-1d-array_2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Loops-1/Loops-1.iml" filepath="$PROJECT_DIR$/Loops-1/Loops-1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MaximumIndex/MaximumIndex.iml" filepath="$PROJECT_DIR$/MaximumIndex/MaximumIndex.iml" />
+      <module fileurl="file://$PROJECT_DIR$/braces_coderspace/braces_coderspace.iml" filepath="$PROJECT_DIR$/braces_coderspace/braces_coderspace.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/hackerrank-.iml" filepath="$PROJECT_DIR$/.idea/hackerrank-.iml" />
+      <module fileurl="file://$PROJECT_DIR$/if-else/if-else.iml" filepath="$PROJECT_DIR$/if-else/if-else.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java-1d-array/java-1d-array.iml" filepath="$PROJECT_DIR$/java-1d-array/java-1d-array.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java-loops-2/java-loops-2.iml" filepath="$PROJECT_DIR$/java-loops-2/java-loops-2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java-method-overriding/java-method-overriding.iml" filepath="$PROJECT_DIR$/java-method-overriding/java-method-overriding.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java-regex-2/java-regex-2.iml" filepath="$PROJECT_DIR$/java-regex-2/java-regex-2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java-subarray/java-subarray.iml" filepath="$PROJECT_DIR$/java-subarray/java-subarray.iml" />
+      <module fileurl="file://$PROJECT_DIR$/static-initializer/static-initializer.iml" filepath="$PROJECT_DIR$/static-initializer/static-initializer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/staticClass/staticClass.iml" filepath="$PROJECT_DIR$/staticClass/staticClass.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tag_context_extractor/tag_context_extractor.iml" filepath="$PROJECT_DIR$/tag_context_extractor/tag_context_extractor.iml" />
+    </modules>
+  </component>
+</project>
