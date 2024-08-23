@@ -34,13 +34,14 @@ public class Academician extends Employer{
     public String leave(){
         return this.title +" "+ this.getNameFirst() + " left from University";
     }
+    public String leave(String place){
+        return this.title +" "+ this.getNameFirst() + " left from "+place;
+    }
     @Override
     public String foodHouse(){
         return this.title +" "+ this.getNameFirst() + " entered to food house";
     }
     public String enterToLecture(){
-        return this.title +" " + this.getNameFirst() + " enteret to "+ this.department + " lecture";
+        return this.title +" " + this.getNameFirst() + " entered to "+ this.department + " lecture";
     }
-
-
 }

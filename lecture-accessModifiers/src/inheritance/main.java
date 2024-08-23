@@ -38,5 +38,14 @@ public class main {
         System.out.println(karen.enter());
         System.out.println(karen.watch());
         System.out.println(karen.getWorkingTime());
+
+        //Polymorphism
+        Employer kane = new Academician("Ahmet","ahmet@gmail.com",512,"EEE","Dr");
+        System.out.println(kane.enter());
+        System.out.println(kane.leave());
+        //We can hold on same list when we try main class.
+        Employer[] mainList = {kane,caitlyn,karen,max,tom};
+        System.out.println(mainList.length);
+
     }
 }
