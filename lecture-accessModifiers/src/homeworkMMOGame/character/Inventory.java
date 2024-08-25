@@ -1,5 +1,7 @@
 package homeworkMMOGame.character;
 
+import java.util.List;
+
 public class Inventory {
     private Player player;
     private static boolean food;
@@ -10,8 +12,15 @@ public class Inventory {
     private static boolean isWater;
     private static boolean isFirewood;
     private static boolean isFood;
-    //add inventory array for drops
+    public static List<String> itemList;
+    private static int gold;
 
+    public static void setGold(int gold) {
+        Inventory.gold = gold;
+    }
+    public static int getGold() {
+        return gold;
+    }
     public static int getArmourDefence() {
         return armourDefence;
     }
@@ -35,6 +44,9 @@ public class Inventory {
     }
     public static boolean isIsWater() {
         return isWater;
+    }
+    public static void setItemList(List<String> itemList) {
+        Inventory.itemList = itemList;
     }
 
     public static void setArmorName(String armorName) {
@@ -60,5 +72,12 @@ public class Inventory {
     }
     public static void setIsWater(boolean isWater) {
         Inventory.isWater = isWater;
+    }
+    public static List<String> getItemList() {
+        return itemList;
+    }
+    public static void addItem(String item){
+        itemList.add(item);
+        //add control for security.
     }
 }

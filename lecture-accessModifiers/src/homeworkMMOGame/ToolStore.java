@@ -125,6 +125,7 @@ public class ToolStore extends NormalLocation{
     }
     public void sellMenu(){
         //sell menu
+        //user hashmap for inventory
     }
 
 

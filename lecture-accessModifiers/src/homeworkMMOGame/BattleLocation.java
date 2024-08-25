@@ -3,8 +3,8 @@ package homeworkMMOGame;
 import homeworkMMOGame.character.Player;
 
 public abstract class BattleLocation extends Location{
-    public Obstackle obstackle;
-    public BattleLocation(Player player,Obstackle obstackle){
+    public Obstacle obstacle;
+    public BattleLocation(Player player, Obstacle obstacle){
         super(player);
         Location.setOnLocation(normalLoc.NULL);
     }
@@ -13,4 +13,5 @@ public abstract class BattleLocation extends Location{
     public boolean onLocation(){
         return true;
     }
+    public abstract void combat();
 }

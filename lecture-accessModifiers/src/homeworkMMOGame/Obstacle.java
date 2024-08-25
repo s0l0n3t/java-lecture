@@ -1,14 +1,29 @@
 package homeworkMMOGame;
 
-public abstract class Obstackle {
+import homeworkMMOGame.character.Inventory;
+
+public class Obstacle {
     private int health;
     private String name;
     private int damage;
     private int monsterCount;
     private final String[] ITEMS = {"GUN","PISTOL","SWORD","SOFT_ARMOR","MEDIUM_ARMOR","HEAVY_ARMOR"};
-    public abstract void itemDrop();
-    public abstract void monsterSpawn();
+    private int gold;
+    private int stdHealth;
+    public void takeDrop(){
+        if((int)Math.ceil(Math.random()*100) == 10){
+            Inventory.addItem(ITEMS[(int)Math.ceil(Math.random()*6)]);
+            //when %10 luck begun get random item.
+        }
+        Inventory.setGold(Inventory.getGold()+ this.getGold());
+    }//call when health = 0
 
+    public void setStdHealth(int stdHealth) {
+        this.stdHealth = stdHealth;
+    }
+    public int getStdHealth() {
+        return stdHealth;
+    }
     public int getHealth() {
         return health;
     }
@@ -32,5 +47,11 @@ public abstract class Obstackle {
     }
     public void setName(String name) {
         this.name = name;
+    }
+    public int getGold() {
+        return gold;
+    }
+    public void setGold(int gold) {
+        this.gold = gold;
     }
 }

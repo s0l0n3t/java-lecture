@@ -1,26 +1,15 @@
 package homeworkMMOGame;
 
-public class Vampire extends Obstackle{
+public class Vampire extends Obstacle {
 
     public Vampire(){
         this.setName("Vampire");
-        this.setHealth(10);
-        this.setDamage((int)Math.ceil(Math.random()*5));
+        this.setHealth(14);
+        this.setStdHealth(14);
+        this.setDamage(4);
         this.setMonsterCount((int)Math.ceil(Math.random()*3));
+        this.setGold(7);
     }
-    public void itemDrop(){
-        if((int)Math.ceil(Math.random()*100) == 10){
-            switch ((int)Math.ceil(Math.random()*100)){
-                case 1:
-                    break;
 
-                case 2:
-                    break;
 
-            }
-        }
-    }
-    public void monsterSpawn(){
-
-    }
 }
