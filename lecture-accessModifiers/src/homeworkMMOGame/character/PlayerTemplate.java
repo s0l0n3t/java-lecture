@@ -4,7 +4,7 @@ public abstract class PlayerTemplate {
     private String nickname;
     private int damage;
     private int health;
-    private int money;
+
     private Characters selectedCharacter;
     private int stdHealth = 0;
     public enum Characters{
@@ -16,11 +16,9 @@ public abstract class PlayerTemplate {
     public int getStdHealth() {
         return stdHealth;
     }
-
     public void setStdHealth(int stdHealth) {
         this.stdHealth = stdHealth;
     }
-
     public void setSelectedCharacter(Characters selectedCharacter) {
         this.selectedCharacter = selectedCharacter;
     }
@@ -33,9 +31,6 @@ public abstract class PlayerTemplate {
     public int getHealth() {
         return health;
     }
-    public int getMoney() {
-        return money;
-    }
     public String getNickname() {
         return nickname;
     }
@@ -44,9 +39,6 @@ public abstract class PlayerTemplate {
     }
     public void setHealth(int health) {
         this.health = health;
-    }
-    public void setMoney(int money) {
-        this.money = money;
     }
     public void setNickname(String nickname) {
         this.nickname = nickname;

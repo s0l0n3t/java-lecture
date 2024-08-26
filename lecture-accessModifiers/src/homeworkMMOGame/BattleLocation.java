@@ -13,5 +13,5 @@ public abstract class BattleLocation extends Location{
     public boolean onLocation(){
         return true;
     }
-    public abstract void combat();
+
 }

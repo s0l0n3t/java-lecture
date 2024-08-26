@@ -1,5 +1,6 @@
 package homeworkMMOGame.character;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Inventory {
@@ -12,7 +13,7 @@ public class Inventory {
     private static boolean isWater;
     private static boolean isFirewood;
     private static boolean isFood;
-    public static List<String> itemList;
+    public static List<String> itemList = new ArrayList<>();
     private static int gold;
 
     public static void setGold(int gold) {
@@ -77,7 +78,7 @@ public class Inventory {
         return itemList;
     }
     public static void addItem(String item){
-        itemList.add(item);
+       itemList.add(item);
         //add control for security.
     }
 }

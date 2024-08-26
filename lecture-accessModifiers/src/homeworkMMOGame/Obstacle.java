@@ -11,11 +11,15 @@ public class Obstacle {
     private int gold;
     private int stdHealth;
     public void takeDrop(){
-        if((int)Math.ceil(Math.random()*100) == 10){
-            Inventory.addItem(ITEMS[(int)Math.ceil(Math.random()*6)]);
+        if((int)Math.ceil(Math.random()*100) >= 10){
+            Inventory.addItem(ITEMS[(int)Math.ceil(Math.random()*5)]);
+            System.out.println("\n\n\n\nYou dropped an item !");
+            System.out.println("You dropped an item !");
+            System.out.println("You dropped an item !");
+            System.out.println("You dropped an item !");
             //when %10 luck begun get random item.
         }
-        Inventory.setGold(Inventory.getGold()+ this.getGold());
+        Inventory.setGold(Inventory.getGold() + this.getGold());
     }//call when health = 0
 
     public void setStdHealth(int stdHealth) {
