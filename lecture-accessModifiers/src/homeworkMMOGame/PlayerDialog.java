@@ -84,7 +84,7 @@ public class PlayerDialog {
                 \n1 - buy weapons
                 2 - buy armor
                 3 - buy support
-                4 - sell [just developing]"""+
+                4 - sell drops"""+
                 this.exitDialog();
     }
     public final String getToolStoreBuyWeapon(Player player,HashMap<String, Integer> hashMap, String gunValue,String pistolValue,String swordValue){
@@ -98,7 +98,7 @@ public class PlayerDialog {
         return getToolStoreBanner(player)+
                 "\n1 - Soft Armor "+ hashMap.get(softValue)+
                 "\n2 - Medium Armor "+ hashMap.get(medValue)+
-                "\n3 - Medium Armor "+ hashMap.get(heavyValue)+
+                "\n3 - Heavy Armor "+ hashMap.get(heavyValue)+
                 this.exitDialog();
     }
     public final String getToolStoreBuySupport(Player player){

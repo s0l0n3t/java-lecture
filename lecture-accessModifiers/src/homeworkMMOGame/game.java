@@ -22,9 +22,6 @@ public class game {
             SafeHouse safeHouse = new SafeHouse(playerObject);
             ToolStore toolstore = new ToolStore(playerObject);
             while (playerObject.getHealth() > 0){
-                playerObject.setDamage(playerObject.getDamage() + Inventory.getWeaponDamage());
-                playerObject.setHealth(playerObject.getHealth() + Inventory.getArmourDefence());
-                playerObject.setStdHealth(playerObject.getHealth());
                 System.out.println(dialog.getMainMenu(playerObject));
                 switch (dialogScanner.nextLine()){
                     case "1":
@@ -37,12 +34,15 @@ public class game {
                                 switch (dialogScanner.nextLine()){
                                     case "1":
                                         toolstore.buyMenu(ToolStore.WEAPONS.GUN);
+                                        playerObject.setDamage(playerObject.getDamage() + Inventory.getWeaponDamage());
                                         break;
                                     case "2":
                                         toolstore.buyMenu(ToolStore.WEAPONS.PISTOL);
+                                        playerObject.setDamage(playerObject.getDamage() + Inventory.getWeaponDamage());
                                         break;
                                     case "3":
                                         toolstore.buyMenu(ToolStore.WEAPONS.SWORD);
+                                        playerObject.setDamage(playerObject.getDamage() + Inventory.getWeaponDamage());
                                         break;
                                     case "e":
                                         break;
@@ -50,16 +50,22 @@ public class game {
                                 break;
                             case "2":
                                 System.out.println(dialog.getToolStoreBanner(playerObject));
-                                System.out.println(dialog.getToolStoreBuyArmor(playerObject,toolstore.getItemValuesMap(),ToolStore.ARMOR.SOFT.name(),ToolStore.ARMOR.MEDIUM.name(),ToolStore.ARMOR.HEAVY.name()));
+                                System.out.println(dialog.getToolStoreBuyArmor(playerObject,toolstore.getItemValuesMap(),ToolStore.ARMOR.SOFT_ARMOR.name(),ToolStore.ARMOR.MEDIUM_ARMOR.name(),ToolStore.ARMOR.HEAVY_ARMOR.name()));
                                 switch (dialogScanner.nextLine()){
                                     case "1":
-                                        toolstore.buyMenu(ToolStore.ARMOR.SOFT);
+                                        toolstore.buyMenu(ToolStore.ARMOR.SOFT_ARMOR);
+                                        playerObject.setHealth(playerObject.getHealth() + Inventory.getArmourDefence());
+                                        playerObject.setStdHealth(playerObject.getHealth());
                                         break;
                                     case "2":
-                                        toolstore.buyMenu(ToolStore.ARMOR.MEDIUM);
+                                        toolstore.buyMenu(ToolStore.ARMOR.MEDIUM_ARMOR);
+                                        playerObject.setHealth(playerObject.getHealth() + Inventory.getArmourDefence());
+                                        playerObject.setStdHealth(playerObject.getHealth());
                                         break;
                                     case "3":
-                                        toolstore.buyMenu(ToolStore.ARMOR.HEAVY);
+                                        toolstore.buyMenu(ToolStore.ARMOR.HEAVY_ARMOR);
+                                        playerObject.setHealth(playerObject.getHealth() + Inventory.getArmourDefence());
+                                        playerObject.setStdHealth(playerObject.getHealth());
                                         break;
                                     case "e":
                                         break;
@@ -81,6 +87,9 @@ public class game {
                                     case "e":
                                         break;
                                 }
+                                break;
+                            case "4":
+                                toolstore.sellMenu();
                                 break;
                             case "e":
                                 break;

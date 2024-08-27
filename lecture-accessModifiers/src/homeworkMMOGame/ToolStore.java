@@ -14,9 +14,9 @@ public class ToolStore extends NormalLocation{
         itemValuesMap.put(WEAPONS.GUN.name(),45);
         itemValuesMap.put(WEAPONS.SWORD.name(),20);
         itemValuesMap.put(WEAPONS.PISTOL.name(),35);
-        itemValuesMap.put(ARMOR.SOFT.name(),15);
-        itemValuesMap.put(ARMOR.MEDIUM.name(),20);
-        itemValuesMap.put(ARMOR.HEAVY.name(),40);
+        itemValuesMap.put(ARMOR.SOFT_ARMOR.name(),15);
+        itemValuesMap.put(ARMOR.MEDIUM_ARMOR.name(),20);
+        itemValuesMap.put(ARMOR.HEAVY_ARMOR.name(),40);
     }
     public enum WEAPONS{
         PISTOL,
@@ -24,9 +24,9 @@ public class ToolStore extends NormalLocation{
         GUN
     }
     public enum ARMOR{
-        SOFT,
-        MEDIUM,
-        HEAVY
+        SOFT_ARMOR,
+        MEDIUM_ARMOR,
+        HEAVY_ARMOR
     }
     public enum SUPPORT{
         FOOD,
@@ -70,30 +70,30 @@ public class ToolStore extends NormalLocation{
 
     }
     public void buyMenu(ARMOR armor){
-        if(armor.equals(ARMOR.SOFT)){
-            if(Inventory.getGold() >= itemValuesMap.get(ARMOR.SOFT.name())){
+        if(armor.equals(ARMOR.SOFT_ARMOR)){
+            if(Inventory.getGold() >= itemValuesMap.get(ARMOR.SOFT_ARMOR.name())){
                 Inventory.setArmorName(armor.name());
-                Inventory.setGold(Inventory.getGold() - itemValuesMap.get(ARMOR.SOFT.name()));
+                Inventory.setGold(Inventory.getGold() - itemValuesMap.get(ARMOR.SOFT_ARMOR.name()));
                 Inventory.setArmourDefence(2);
             }
             else{
                 System.out.println("Not enough money !");
             }
         }
-        else if(armor.equals(ARMOR.MEDIUM)){
-            if(Inventory.getGold() >= itemValuesMap.get(ARMOR.MEDIUM.name())){
+        else if(armor.equals(ARMOR.MEDIUM_ARMOR)){
+            if(Inventory.getGold() >= itemValuesMap.get(ARMOR.MEDIUM_ARMOR.name())){
                 Inventory.setArmorName(armor.name());
-                Inventory.setGold(Inventory.getGold() - itemValuesMap.get(ARMOR.MEDIUM.name()));
+                Inventory.setGold(Inventory.getGold() - itemValuesMap.get(ARMOR.MEDIUM_ARMOR.name()));
                 Inventory.setArmourDefence(4);
             }
             else{
                 System.out.println("Not enough money !");
             }
         }
-        else if(armor.equals(ARMOR.HEAVY)){
-            if(Inventory.getGold() >= itemValuesMap.get(ARMOR.HEAVY.name())){
+        else if(armor.equals(ARMOR.HEAVY_ARMOR)){
+            if(Inventory.getGold() >= itemValuesMap.get(ARMOR.HEAVY_ARMOR.name())){
                 Inventory.setArmorName(armor.name());
-                Inventory.setGold(Inventory.getGold() - itemValuesMap.get(ARMOR.HEAVY.name()));
+                Inventory.setGold(Inventory.getGold() - itemValuesMap.get(ARMOR.HEAVY_ARMOR.name()));
                 Inventory.setArmourDefence(7);
             }
             else{
@@ -133,10 +133,13 @@ public class ToolStore extends NormalLocation{
 
     }
     public void sellMenu(){
-        for (int i = 0;i<Inventory.getItemList().size();i++){
-            System.out.println(Inventory.getItemList().get(i) + " Sold for "+ this.getItemValuesMap().get(Inventory.getItemList().get(i)));
-            Inventory.setGold(Inventory.getGold() + this.getItemValuesMap().get(Inventory.getItemList().get(i)));
+        for(int i = 0; i< Inventory.getItemList().size();i++){
+            if (this.getItemValuesMap().containsKey(Inventory.getItemList().get(i))){
+                System.out.println(Inventory.getItemList().get(i) + " item sold for "+ this.getItemValuesMap().get(Inventory.getItemList().get(i)));
+                Inventory.setGold(Inventory.getGold() + this.getItemValuesMap().get(Inventory.getItemList().get(i)));
+            }
         }
+        Inventory.getItemList().clear();
     }
 
 
