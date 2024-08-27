@@ -22,16 +22,18 @@ public class game {
             SafeHouse safeHouse = new SafeHouse(playerObject);
             ToolStore toolstore = new ToolStore(playerObject);
             while (playerObject.getHealth() > 0){
-                //add exit maintance for each case block.
+                playerObject.setDamage(playerObject.getDamage() + Inventory.getWeaponDamage());
+                playerObject.setHealth(playerObject.getHealth() + Inventory.getArmourDefence());
+                playerObject.setStdHealth(playerObject.getHealth());
                 System.out.println(dialog.getMainMenu(playerObject));
                 switch (dialogScanner.nextLine()){
                     case "1":
-                        System.out.println(dialog.getToolStoreBanner());
-                        System.out.println(dialog.getToolStore());
+                        System.out.println(dialog.getToolStoreBanner(playerObject));
+                        System.out.println(dialog.getToolStore(playerObject));
                         switch (dialogScanner.nextLine()){
                             case "1":
-                                System.out.println(dialog.getToolStoreBanner());
-                                System.out.println(dialog.getToolStoreBuyWeapon());
+                                System.out.println(dialog.getToolStoreBanner(playerObject));
+                                System.out.println(dialog.getToolStoreBuyWeapon(playerObject,toolstore.getItemValuesMap(),ToolStore.WEAPONS.GUN.name(),ToolStore.WEAPONS.PISTOL.name(),ToolStore.WEAPONS.SWORD.name()));
                                 switch (dialogScanner.nextLine()){
                                     case "1":
                                         toolstore.buyMenu(ToolStore.WEAPONS.GUN);
@@ -43,13 +45,12 @@ public class game {
                                         toolstore.buyMenu(ToolStore.WEAPONS.SWORD);
                                         break;
                                     case "e":
-                                        //exit dialog
                                         break;
                                 }
                                 break;
                             case "2":
-                                System.out.println(dialog.getToolStoreBanner());
-                                System.out.println(dialog.getToolStoreBuyArmor());
+                                System.out.println(dialog.getToolStoreBanner(playerObject));
+                                System.out.println(dialog.getToolStoreBuyArmor(playerObject,toolstore.getItemValuesMap(),ToolStore.ARMOR.SOFT.name(),ToolStore.ARMOR.MEDIUM.name(),ToolStore.ARMOR.HEAVY.name()));
                                 switch (dialogScanner.nextLine()){
                                     case "1":
                                         toolstore.buyMenu(ToolStore.ARMOR.SOFT);
@@ -65,8 +66,8 @@ public class game {
                                 }
                                 break;
                             case "3":
-                                System.out.println(dialog.getToolStoreBanner());
-                                System.out.println(dialog.getToolStoreBuySupport());
+                                System.out.println(dialog.getToolStoreBanner(playerObject));
+                                System.out.println(dialog.getToolStoreBuySupport(playerObject));
                                 switch (dialogScanner.nextLine()){
                                     case "1":
                                         toolstore.buyMenu(ToolStore.SUPPORT.FIREWOOD);
@@ -81,12 +82,7 @@ public class game {
                                         break;
                                 }
                                 break;
-                            case "4":
-                                System.out.println(dialog.getToolStoreBanner());
-                                //selling
-                                break;
                             case "e":
-                                //Exit dialog
                                 break;
                             case "i":
                                 System.out.println(dialog.getInventory(playerObject));
@@ -137,16 +133,13 @@ public class game {
                                 System.out.println(dialog.getInventory(playerObject));
                                 break;
                             case "e":
-                                //Back
                                 break;
                         }
-
                         break;
                     case "i":
                         System.out.println(dialog.getInventory(playerObject));
                         break;
                     case "e":
-                        //Exit dialog
                         break;
                 }
             }
