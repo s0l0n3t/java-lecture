@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ad02a0fa-46ec-4a1a-8237-0637be780eaa" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../NestedAndGenericLecture/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../NestedAndGenericLecture/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../NestedAndGenericLecture/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../NestedAndGenericLecture/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../NestedAndGenericLecture/NestedAndGenericLecture.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../NestedAndGenericLecture/src/Anonym.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../NestedAndGenericLecture/src/BoxUnbox.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../NestedAndGenericLecture/src/InnerClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../NestedAndGenericLecture/src/LocalClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../NestedAndGenericLecture/src/WrapperClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../akin_kaldiroglu_oop/lecture1/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../akin_kaldiroglu_oop/lecture1/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../akin_kaldiroglu_oop/lecture1/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../akin_kaldiroglu_oop/lecture1/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../akin_kaldiroglu_oop/lecture1/lecture1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../akin_kaldiroglu_oop/lecture1/src/selam.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/phone-book.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MainSolution.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 4
+}]]></component>
+  <component name="ProjectId" id="2lNUWXA8vjajCw09wKsmwqvlN3k" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.MainSolution.executor": "Debug",
+    "Application.Solution.executor": "Debug",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "java102",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="Application.MainSolution">
+    <configuration name="MainSolution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MainSolution" />
+      <module name="phone-book" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Solution" />
+      <module name="phone-book" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.MainSolution" />
+        <item itemvalue="Application.Solution" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ad02a0fa-46ec-4a1a-8237-0637be780eaa" name="Changes" comment="" />
+      <created>1725020061387</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1725020061387</updated>
+    </task>
+    <servers />
+  </component>
+</project>
