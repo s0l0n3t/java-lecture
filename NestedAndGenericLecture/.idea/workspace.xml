@@ -5,18 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f03fe0f8-871d-4067-9b62-b365c264ab69" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/HashSetClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../akin_kaldiroglu_oop/lecture_2/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../akin_kaldiroglu_oop/lecture_2/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../akin_kaldiroglu_oop/lecture_2/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../akin_kaldiroglu_oop/lecture_2/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../akin_kaldiroglu_oop/lecture_2/lecture_2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../akin_kaldiroglu_oop/lecture_2/src/homework1/FootballPlayer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../akin_kaldiroglu_oop/lecture_2/src/homework1/FootballPlayerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../akin_kaldiroglu_oop/lecture_2/src/homework2/Cast.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../akin_kaldiroglu_oop/lecture_2/src/homework2/Variables.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../akin_kaldiroglu_oop/lecture_2/src/testClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ArrayListClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/QueueLinkedListClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TreeSetClass/OrderComparableTreeSet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TreeSetClass/TreeSetClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TreeSetClass/TreeSetTestClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/VectorClassLecture.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hackerrank-/arrayListProblem/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hackerrank-/arrayListProblem/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hackerrank-/arrayListProblem/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hackerrank-/arrayListProblem/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hackerrank-/arrayListProblem/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hackerrank-/arrayListProblem/arrayListCase.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hackerrank-/arrayListProblem/arrayListProblem.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hackerrank-/arrayListProblem/src/ArrayListSolution.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hackerrank-/java-hashset/case_screenshot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hackerrank-/priority-queue/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hackerrank-/priority-queue/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hackerrank-/priority-queue/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hackerrank-/priority-queue/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hackerrank-/priority-queue/priority-queue.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HashSetClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HashSetClass.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,25 +48,33 @@
   &quot;associatedIndex&quot;: 3
 }</component>
   <component name="ProjectId" id="2lXSeBLNC4gXmh96z2BECuN4QiD" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.ArrayListClass.executor": "Debug",
     "Application.ExceptionHandling.executor": "Debug",
     "Application.HashSetClass.executor": "Debug",
+    "Application.QueueLinkedListClass.executor": "Debug",
     "Application.ThrowClass.executor": "Debug",
+    "Application.TreeSetClass.executor": "Debug",
     "Application.main.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "java102",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Dosyalarım/java-lecture/NestedAndGenericLecture"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.HashSetClass">
-    <configuration name="ExceptionHandling" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ExceptionHandling" />
+  <component name="RunManager" selected="Application.QueueLinkedListClass">
+    <configuration name="ArrayListClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ArrayListClass" />
       <module name="NestedAndGenericLecture" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -69,8 +87,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="QueueLinkedListClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="QueueLinkedListClass" />
+      <module name="NestedAndGenericLecture" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ThrowClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ThrowClass" />
+      <module name="NestedAndGenericLecture" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TreeSetClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="TreeSetClass.TreeSetClass" />
       <module name="NestedAndGenericLecture" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -91,9 +123,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.HashSetClass" />
+        <item itemvalue="Application.QueueLinkedListClass" />
+        <item itemvalue="Application.ArrayListClass" />
+        <item itemvalue="Application.TreeSetClass" />
         <item itemvalue="Application.ThrowClass" />
-        <item itemvalue="Application.ExceptionHandling" />
+        <item itemvalue="Application.HashSetClass" />
       </list>
     </recent_temporary>
   </component>
@@ -107,5 +141,8 @@
       <updated>1725325021403</updated>
     </task>
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

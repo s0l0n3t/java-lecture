@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="823178e8-b0ca-4345-bb70-aa8363be26ff" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../NestedAndGenericLecture/src/ArrayListClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../NestedAndGenericLecture/src/QueueLinkedListClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../NestedAndGenericLecture/src/TreeSetClass/OrderComparableTreeSet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../NestedAndGenericLecture/src/TreeSetClass/TreeSetClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../NestedAndGenericLecture/src/TreeSetClass/TreeSetTestClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../NestedAndGenericLecture/src/VectorClassLecture.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../arrayListProblem/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../arrayListProblem/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../arrayListProblem/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../arrayListProblem/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../arrayListProblem/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../arrayListProblem/arrayListCase.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../arrayListProblem/arrayListProblem.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../arrayListProblem/src/ArrayListSolution.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java-hashset/case_screenshot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/priority-queue.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NestedAndGenericLecture/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../NestedAndGenericLecture/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NestedAndGenericLecture/src/HashSetClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../NestedAndGenericLecture/src/HashSetClass.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 8
+}]]></component>
+  <component name="ProjectId" id="2m4fPp4eBDb94vHelFe9sqi29MT" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main (1).executor": "Debug",
+    "Application.Main (2).executor": "Debug",
+    "Application.Main (3).executor": "Debug",
+    "Application.Main (4).executor": "Debug",
+    "Application.Main.executor": "Debug",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "java102",
+    "kotlin-language-version-configured": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="priority-queue" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="priority-queue" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="priority-queue" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (4)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="priority-queue" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="priority-queue" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Main (4)" />
+        <item itemvalue="Application.Main (3)" />
+        <item itemvalue="Application.Main (2)" />
+        <item itemvalue="Application.Main (1)" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="823178e8-b0ca-4345-bb70-aa8363be26ff" name="Changes" comment="" />
+      <created>1726340748763</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1726340748763</updated>
+    </task>
+    <servers />
+  </component>
+</project>
