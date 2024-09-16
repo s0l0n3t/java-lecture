@@ -4,30 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="823178e8-b0ca-4345-bb70-aa8363be26ff" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../NestedAndGenericLecture/src/ArrayListClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../NestedAndGenericLecture/src/QueueLinkedListClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../NestedAndGenericLecture/src/TreeSetClass/OrderComparableTreeSet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../NestedAndGenericLecture/src/TreeSetClass/TreeSetClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../NestedAndGenericLecture/src/TreeSetClass/TreeSetTestClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../NestedAndGenericLecture/src/VectorClassLecture.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../arrayListProblem/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../arrayListProblem/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../arrayListProblem/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../arrayListProblem/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../arrayListProblem/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../arrayListProblem/arrayListCase.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../arrayListProblem/arrayListProblem.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../arrayListProblem/src/ArrayListSolution.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../java-hashset/case_screenshot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/priority-queue.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../NestedAndGenericLecture/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../NestedAndGenericLecture/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../NestedAndGenericLecture/src/HashSetClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../NestedAndGenericLecture/src/HashSetClass.java" afterDir="false" />
-    </list>
+    <list default="true" id="823178e8-b0ca-4345-bb70-aa8363be26ff" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

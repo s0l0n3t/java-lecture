@@ -5,28 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f03fe0f8-871d-4067-9b62-b365c264ab69" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ArrayListClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/QueueLinkedListClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TreeSetClass/OrderComparableTreeSet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TreeSetClass/TreeSetClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TreeSetClass/TreeSetTestClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/VectorClassLecture.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../hackerrank-/arrayListProblem/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../hackerrank-/arrayListProblem/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../hackerrank-/arrayListProblem/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../hackerrank-/arrayListProblem/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../hackerrank-/arrayListProblem/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../hackerrank-/arrayListProblem/arrayListCase.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../hackerrank-/arrayListProblem/arrayListProblem.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../hackerrank-/arrayListProblem/src/ArrayListSolution.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../hackerrank-/java-hashset/case_screenshot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../hackerrank-/priority-queue/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../hackerrank-/priority-queue/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../hackerrank-/priority-queue/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../hackerrank-/priority-queue/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../hackerrank-/priority-queue/priority-queue.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Homework/BookSort/Book.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Homework/BookSort/ComparatorById.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Homework/BookSort/ComparatorByPageNumber.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Homework/BookSort/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MapClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HashSetClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HashSetClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hackerrank-/priority-queue/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../hackerrank-/priority-queue/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +46,8 @@
     "Application.ArrayListClass.executor": "Debug",
     "Application.ExceptionHandling.executor": "Debug",
     "Application.HashSetClass.executor": "Debug",
+    "Application.Main.executor": "Debug",
+    "Application.MapClass.executor": "Debug",
     "Application.QueueLinkedListClass.executor": "Debug",
     "Application.ThrowClass.executor": "Debug",
     "Application.TreeSetClass.executor": "Debug",
@@ -72,7 +59,7 @@
     "last_opened_file_path": "C:/Dosyalarım/java-lecture/NestedAndGenericLecture"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.QueueLinkedListClass">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="ArrayListClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ArrayListClass" />
       <module name="NestedAndGenericLecture" />
@@ -80,8 +67,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HashSetClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="HashSetClass" />
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Homework.BookSort.Main" />
+      <module name="NestedAndGenericLecture" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Homework.BookSort.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MapClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MapClass" />
       <module name="NestedAndGenericLecture" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -89,13 +89,6 @@
     </configuration>
     <configuration name="QueueLinkedListClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="QueueLinkedListClass" />
-      <module name="NestedAndGenericLecture" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ThrowClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ThrowClass" />
       <module name="NestedAndGenericLecture" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -123,11 +116,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.MapClass" />
         <item itemvalue="Application.QueueLinkedListClass" />
         <item itemvalue="Application.ArrayListClass" />
         <item itemvalue="Application.TreeSetClass" />
-        <item itemvalue="Application.ThrowClass" />
-        <item itemvalue="Application.HashSetClass" />
       </list>
     </recent_temporary>
   </component>
