@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f03fe0f8-871d-4067-9b62-b365c264ab69" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Homework/PatikaStore/Company.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Homework/PatikaStore/CompanyClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Homework/PatikaStore/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Homework/PatikaStore/Notebook.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Homework/PatikaStore/Phone.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Homework/PatikaStore/StoreProcess.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Homework/InsuranceManagementSystem/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -21,6 +16,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -46,6 +42,7 @@
     "Application.ArrayListClass.executor": "Debug",
     "Application.ExceptionHandling.executor": "Debug",
     "Application.HashSetClass.executor": "Debug",
+    "Application.Homework.InsuranceManagementSystem.Main.executor": "Debug",
     "Application.Homework.PatikaStore.Main.executor": "Debug",
     "Application.Main.executor": "Debug",
     "Application.MapClass.executor": "Debug",
@@ -60,10 +57,16 @@
     "last_opened_file_path": "C:/Dosyalarım/java-lecture/NestedAndGenericLecture"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.Homework.PatikaStore.Main">
-    <configuration name="ArrayListClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ArrayListClass" />
+  <component name="RunManager" selected="Application.Homework.InsuranceManagementSystem.Main">
+    <configuration name="Homework.InsuranceManagementSystem.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Homework.InsuranceManagementSystem.Main" />
       <module name="NestedAndGenericLecture" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Homework.InsuranceManagementSystem.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -123,11 +126,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Homework.PatikaStore.Main" />
+        <item itemvalue="Application.Homework.InsuranceManagementSystem.Main" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Homework.PatikaStore.Main" />
         <item itemvalue="Application.MapClass" />
         <item itemvalue="Application.QueueLinkedListClass" />
-        <item itemvalue="Application.ArrayListClass" />
       </list>
     </recent_temporary>
   </component>
