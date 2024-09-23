@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f03fe0f8-871d-4067-9b62-b365c264ab69" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="f03fe0f8-871d-4067-9b62-b365c264ab69" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,27 +33,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Application.ArrayListClass.executor": "Debug",
-    "Application.ExceptionHandling.executor": "Debug",
-    "Application.HashSetClass.executor": "Debug",
-    "Application.Homework.InsuranceManagementSystem.Main.executor": "Debug",
-    "Application.Homework.PatikaStore.Main.executor": "Debug",
-    "Application.Main.executor": "Debug",
-    "Application.MapClass.executor": "Debug",
-    "Application.QueueLinkedListClass.executor": "Debug",
-    "Application.ThrowClass.executor": "Debug",
-    "Application.TreeSetClass.executor": "Debug",
-    "Application.main.executor": "Debug",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "java102",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Dosyalarım/java-lecture/NestedAndGenericLecture"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Application.ArrayListClass.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.ExceptionHandling.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.HashSetClass.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.Homework.InsuranceManagementSystem.Main.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.Homework.PatikaStore.Main.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.MapClass.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.QueueLinkedListClass.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.ThrowClass.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.TreeSetClass.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.main.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;java102&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Dosyalarım/java-lecture/NestedAndGenericLecture&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Application.Homework.InsuranceManagementSystem.Main">
     <configuration name="Homework.InsuranceManagementSystem.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Homework.InsuranceManagementSystem.Main" />
