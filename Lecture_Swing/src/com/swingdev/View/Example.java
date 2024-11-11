@@ -30,17 +30,12 @@ public class Example extends JFrame {
 
     public Example(){
         setContentPane(wrapper);
-        setSize(360,160);
+        setSize(360,140);
         setTitle(Config.PROJECT_TITLE);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setLocation(Helper.getCenterX(Toolkit.getDefaultToolkit().getScreenSize(),getSize()),Helper.getCenterY(Toolkit.getDefaultToolkit().getScreenSize(),getSize()));
+        setToolText();
         setVisible(true);
-        textId.setText("ID");
-        textPassword.setText("Password");
-        button2.setText("Login");
-        buttonRegister.setText("Register");
-        btnShowPassword.setText("*");
-
 
         setResizable(false);
         button2.addActionListener(new ActionListener() {
@@ -79,6 +74,15 @@ public class Example extends JFrame {
             }
         });
     }
+    private void setToolText(){
+        textId.setText("Username");
+        textPassword.setText("Password");
+        button2.setText("Login");
+        buttonRegister.setText("Register");
+        btnShowPassword.setText("?");
+    }
+
+
 }
 class Main  {
     public static void main(String[] args) {

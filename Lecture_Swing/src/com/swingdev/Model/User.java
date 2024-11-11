@@ -75,7 +75,7 @@ public class User  {
         } else {
             return null;
         }
-    }
+    }//Control method
     private void setPerms(String type){
         //set perms
     }
