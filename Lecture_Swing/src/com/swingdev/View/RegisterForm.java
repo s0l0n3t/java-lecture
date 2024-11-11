@@ -41,8 +41,12 @@ public class RegisterForm extends JFrame{
         buttonConfirm.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(UserDao.createUser(usernameField.getText(),passwordFieldRegister.getText(),emailField.getText(),typeComboBox.getSelectedItem().toString())){
+                if(UserDao.createObject(usernameField.getText(),passwordFieldRegister.getText(),emailField.getText(),typeComboBox.getSelectedItem().toString())){
+                    Helper.messageSuccess("Creating Successfully");
                     dispose();
+                }
+                else{
+                    Helper.messageFailed("Creating failed");
                 }
             }
         });

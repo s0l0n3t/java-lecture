@@ -17,9 +17,16 @@ public class Person {
     private int experience;
 
     public enum TYPE{
-        type1,
-        type2,
-        type3
+        type1(30),
+        type2(20),
+        type3(10);
+        private int personPermit;
+        TYPE(int i) {
+            personPermit = i;
+        }
+        int getPrice(){
+            return personPermit;
+        }
     }//type1 30,type2 20,type3 10
 
     public Person(){
@@ -88,5 +95,16 @@ public class Person {
     public void setType(String type) {
         this.type = type;
     }
-
+    public static int calculatePermit(String type,int experience){
+        if(type.equals(TYPE.type1.toString())){
+            return TYPE.type1.getPrice()+(experience*5);
+        }
+        if(type.equals(TYPE.type2.toString())){
+            return TYPE.type2.getPrice()+(experience*5);
+        }
+        if(type.equals(TYPE.type3.toString())){
+            return TYPE.type3.getPrice()+(experience*5);
+        }
+        return 0;
+    }
 }

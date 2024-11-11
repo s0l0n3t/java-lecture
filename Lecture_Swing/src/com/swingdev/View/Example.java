@@ -42,15 +42,15 @@ public class Example extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 System.out.println();
-                if(UserDao.findUser(usernameField.getText(),passwordField.getText()).getEmail() != null){
-                    accountObject = UserDao.findUser(usernameField.getText(),passwordField.getText());
-                    userPerms = PermsDao.getPerms(UserDao.findUser(usernameField.getText(),passwordField.getText()).getType());
-                    Helper.messageLoginSuccess();
+                if(UserDao.findObject(usernameField.getText(),passwordField.getText()).getEmail() != null){
+                    accountObject = UserDao.findObject(usernameField.getText(),passwordField.getText());
+                    userPerms = PermsDao.findObject(UserDao.findObject(usernameField.getText(),passwordField.getText()).getType());
+                    Helper.messageSuccess("Login Successfully");
                     dispose();
                     mainWindow mainWindow = new mainWindow();
                 }
                 else {
-                    Helper.messageLoginFailed();
+                    Helper.messageFailed("Login Failed");
                 }
             }
         });

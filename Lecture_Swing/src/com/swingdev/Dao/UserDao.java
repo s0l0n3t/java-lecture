@@ -11,8 +11,8 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
-public class UserDao {
-    public static User findUser(String username,String password){
+public class UserDao implements IDaoClass{
+    public static User findObject(String username,String password){
         User obj = new User();
         String userExistSqlQuery = "SELECT * FROM user WHERE username = ? AND password = ?";
         try {
@@ -21,7 +21,7 @@ public class UserDao {
             preparedStatement.setString(2,password);
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()){
-                obj = userMatch(resultSet);
+                obj = objectMatch(resultSet);
             }
 
         }catch (SQLException exception){
@@ -44,7 +44,7 @@ public class UserDao {
         }
         return userArrayList;
     }
-    public static Boolean createUser(String username,String password,String email,String type) {
+    public static Boolean createObject(String username,String password,String email,String type) {
         String userCreateSqlQuery = "INSERT INTO user " +
                 "(username," +
                 " password," +
@@ -58,15 +58,13 @@ public class UserDao {
             preparedStatement.setString(3, email);
             preparedStatement.setString(4, type);
             preparedStatement.executeUpdate();
-            Helper.messageLoginSuccess();
-            return true;
         } catch (SQLException exception) {
-            Helper.messageLoginFailed();
             System.out.println(exception.toString());
+            return false;
         }
         return true;
     }
-    private static User userMatch(ResultSet resultSet)throws SQLException {
+    private static User objectMatch(ResultSet resultSet)throws SQLException {
         return new User(resultSet.getInt("id"),resultSet.getNString("username"),resultSet.getNString("password"),resultSet.getNString("email"),resultSet.getString("type"));
     }
 }

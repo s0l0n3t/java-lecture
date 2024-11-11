@@ -24,19 +24,23 @@ public class mainWindow extends JFrame{
     private JTable tblPerson;
     private JButton btnExit;
     private DefaultTableModel tblModel;
+    private Object[] personColumnList= {"ID","Name","Surname","Permit","Type","Experience"};
 
 
     public mainWindow(){
         setContentPane(panelAccount);
+        tblModel = new DefaultTableModel();
         windowController(800,500);
         setToolText();
         buttonAccess();
         setTable(this.tblModel,this.tblPerson);
+        fillTable(this.tblModel);
 
         btnAdd.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                //add person form instance
+                CreatePerson createPersonForm = new CreatePerson();
+                dispose();
             }
         });
         btnExit.addActionListener(new ActionListener() {
@@ -82,10 +86,17 @@ public class mainWindow extends JFrame{
         btnExit.setText("EXIT");
     }
     private void setTable(DefaultTableModel tblModel,JTable tblPerson){
-        // createModelPersonlist
-        tblModel = new DefaultTableModel();
-        Object[] personColumnList = {"ID","Name","Surname","Permit","Type","Experience"};
         tblModel.setColumnIdentifiers(personColumnList);
+        tblPerson.setModel(tblModel);
+        tblPerson.getTableHeader().setReorderingAllowed(false);
+    }
+    private void windowController(int width,int height){
+        setSize(width,height);
+        setTitle(Config.PROJECT_TITLE);
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        setLocation(Helper.getCenterX(Toolkit.getDefaultToolkit().getScreenSize(),getSize()),Helper.getCenterY(Toolkit.getDefaultToolkit().getScreenSize(),getSize()));
+    }
+    private void fillTable(DefaultTableModel tblModel){
         for(int i =0;i< PersonDao.getList().size();i++){
             Object[] personTableRow = new Object[personColumnList.length];
             personTableRow[0] = PersonDao.getList().get(i).getId();
@@ -96,14 +107,5 @@ public class mainWindow extends JFrame{
             personTableRow[5] = PersonDao.getList().get(i).getExperience();
             tblModel.addRow(personTableRow);
         }
-        tblPerson.setModel(tblModel);
-        tblPerson.getTableHeader().setReorderingAllowed(false);
-    }
-    private void windowController(int width,int height){
-        setSize(width,height);
-        setTitle(Config.PROJECT_TITLE);
-        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        setLocation(Helper.getCenterX(Toolkit.getDefaultToolkit().getScreenSize(),getSize()),Helper.getCenterY(Toolkit.getDefaultToolkit().getScreenSize(),getSize()));
-
     }
 }

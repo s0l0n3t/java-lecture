@@ -2,18 +2,18 @@ package com.swingdev.Dao;
 
 import com.swingdev.Helper.Config;
 import com.swingdev.Helper.DBConnector;
+import com.swingdev.Helper.Helper;
 import com.swingdev.Model.Person;
 
-import javax.swing.table.TableRowSorter;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
-public class PersonDao {
+public class PersonDao implements IDaoClass{
 
-    public static Person findPerson(String name,String surname){
+    public static Person findObject(String name,String surname){
         Person obj = new Person();
         String personExistSqlQuery = "SELECT * FROM employee WHERE name = ? AND surname = ?";
         try {
@@ -22,13 +22,35 @@ public class PersonDao {
             preparedStatement.setString(2,surname);
             ResultSet resultSet = preparedStatement.getResultSet();
             while (resultSet.next()){
-                obj = personMatch(resultSet);
+                obj = objectMatch(resultSet);
             }
 
         } catch (SQLException exception){
             System.out.println(exception.toString());
         }
         return obj;
+    }
+    public static boolean createObject(String name,String surname,int permit,String type, int experience){
+        String personCreateSqlQuery = "INSERT INTO employee " +
+                "(name," +
+                "surname," +
+                "permit," +
+                "type," +
+                "experience)" +
+                "VALUES (?,?,?,?,?)";
+        try{
+            PreparedStatement preparedStatement = DBConnector.getInstance().prepareStatement(personCreateSqlQuery);
+            preparedStatement.setString(1,name);
+            preparedStatement.setString(2,surname);
+            preparedStatement.setInt(3,permit);
+            preparedStatement.setString(4,type);
+            preparedStatement.setInt(5,experience);
+            preparedStatement.executeUpdate();
+        } catch (SQLException exception){
+            System.out.println(exception.toString());
+            return false;
+        }
+        return true;
     }
 
     public static ArrayList<Person> getList(){
@@ -46,7 +68,7 @@ public class PersonDao {
         }
         return personArrayList;
     }
-    private static Person personMatch(ResultSet resultSet) throws SQLException{
+    private static Person objectMatch(ResultSet resultSet) throws SQLException{
         return new Person(resultSet.getInt("id"),resultSet.getString("name"),resultSet.getString("surname"),resultSet.getInt("permit"),resultSet.getString("type"),resultSet.getInt("experience"));
     }
 }
