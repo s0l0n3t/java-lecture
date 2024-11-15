@@ -27,7 +27,7 @@ public class Person {
         int getPrice(){
             return personPermit;
         }
-    }//type1 30,type2 20,type3 10
+    }
 
     public Person(){
 

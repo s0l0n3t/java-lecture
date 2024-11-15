@@ -3,13 +3,16 @@ package com.swingdev.View;
 import com.swingdev.Dao.PersonDao;
 import com.swingdev.Helper.Config;
 import com.swingdev.Helper.Helper;
+import com.swingdev.Model.Person;
 import com.swingdev.Model.UserPerms;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.event.*;
+import java.util.ArrayList;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class mainWindow extends JFrame{
     private JPanel panelAccount;
@@ -23,8 +26,8 @@ public class mainWindow extends JFrame{
     private JScrollPane scrlPerson;
     private JTable tblPerson;
     private JButton btnExit;
-    private DefaultTableModel tblModel;
-    private Object[] personColumnList= {"ID","Name","Surname","Permit","Type","Experience"};
+    private static DefaultTableModel tblModel;
+
 
 
     public mainWindow(){
@@ -34,13 +37,12 @@ public class mainWindow extends JFrame{
         setToolText();
         buttonAccess();
         setTable(this.tblModel,this.tblPerson);
-        fillTable(this.tblModel);
+        fillTable(PersonDao.getList());
 
         btnAdd.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 CreatePerson createPersonForm = new CreatePerson();
-                dispose();
             }
         });
         btnExit.addActionListener(new ActionListener() {
@@ -48,6 +50,30 @@ public class mainWindow extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 dispose();
                 Example newForm = new Example();
+            }
+        });
+        btnSearch.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(textSearch.getText().isEmpty()){
+                    fillTable(PersonDao.getList());
+                }
+                else{
+                    fillTable(textBoxFindPerson(Helper.textSplit(textSearch.getText())));
+                }
+
+            }
+        });
+        textSearch.addComponentListener(new ComponentAdapter() {
+        });
+        textSearch.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+                super.keyTyped(e);
+                if(textPressEventHandler(e) == false){
+                        e.setKeyChar('\0');
+                        //add warning dialog
+                }
             }
         });
     }
@@ -69,6 +95,7 @@ public class mainWindow extends JFrame{
         }
         return false;
     }
+
     private void buttonAccess(){
         setVisible(true);
         if(isAddable(Example.userPerms)){
@@ -86,7 +113,7 @@ public class mainWindow extends JFrame{
         btnExit.setText("EXIT");
     }
     private void setTable(DefaultTableModel tblModel,JTable tblPerson){
-        tblModel.setColumnIdentifiers(personColumnList);
+        tblModel.setColumnIdentifiers(Helper.personColumnList);
         tblPerson.setModel(tblModel);
         tblPerson.getTableHeader().setReorderingAllowed(false);
     }
@@ -96,16 +123,50 @@ public class mainWindow extends JFrame{
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setLocation(Helper.getCenterX(Toolkit.getDefaultToolkit().getScreenSize(),getSize()),Helper.getCenterY(Toolkit.getDefaultToolkit().getScreenSize(),getSize()));
     }
-    private void fillTable(DefaultTableModel tblModel){
-        for(int i =0;i< PersonDao.getList().size();i++){
-            Object[] personTableRow = new Object[personColumnList.length];
-            personTableRow[0] = PersonDao.getList().get(i).getId();
-            personTableRow[1] = PersonDao.getList().get(i).getName();
-            personTableRow[2] = PersonDao.getList().get(i).getSurname();
-            personTableRow[3] = PersonDao.getList().get(i).getPermit();
-            personTableRow[4] = PersonDao.getList().get(i).getType();
-            personTableRow[5] = PersonDao.getList().get(i).getExperience();
+    public static void fillTable(ArrayList<Person> personArrayList){
+        tblModel.setRowCount(0);//clear Jtable model
+        for(int i =0;i< personArrayList.size();i++){
+            Object[] personTableRow = new Object[Helper.personColumnList.length];
+            personTableRow[0] = personArrayList.get(i).getId();
+            personTableRow[1] = personArrayList.get(i).getName();
+            personTableRow[2] = personArrayList.get(i).getSurname();
+            personTableRow[3] = personArrayList.get(i).getPermit();
+            personTableRow[4] = personArrayList.get(i).getType();
+            personTableRow[5] = personArrayList.get(i).getExperience();
             tblModel.addRow(personTableRow);
         }
     }
+    //regex test if u want to use.
+    private int matchRegex(String input){
+       Pattern pattern = Pattern.compile("\\s");
+       Matcher matcher = pattern.matcher(input);
+       int matches = 0;
+       while (matcher.find()){
+           matches++;
+       }
+       return matches;
+    }
+    private boolean textPressEventHandler(KeyEvent keyEvent){
+        for(int i =0 ;i<  Helper.lowerCaseAlphabet.length;i++){
+            if(keyEvent.getKeyChar() == Helper.lowerCaseAlphabet[i] || keyEvent.getKeyChar() == Helper.upperCaseAlphabet[i] || keyEvent.getKeyChar() == ' '){
+                keyEvent.setKeyChar(keyEvent.getKeyChar());
+                return true;
+            }
+        }
+        return false;
+    }
+    private ArrayList<Person> textBoxFindPerson(ArrayList<String> textBoxArrayList){
+        switch (textBoxArrayList.size()){
+            case 1:
+                return PersonDao.findObjectArray(textBoxArrayList.get(0));
+            case 2:
+                return PersonDao.findObjectArray(textBoxArrayList.get(0),textBoxArrayList.get(1));
+            case 3:
+                return PersonDao.findObjectArray(textBoxArrayList.get(0)+" "+textBoxArrayList.get(1),textBoxArrayList.get(2));
+            default:
+                return PersonDao.findObjectArray(textBoxArrayList.get(0));
+        }
+
+    }
+
 }

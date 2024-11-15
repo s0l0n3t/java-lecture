@@ -29,7 +29,7 @@ public class CreatePerson extends JFrame{
                 if(PersonDao.createObject(textFieldName.getText(),textFieldSurname.getText(),calculatePermit(),personTypeCombobox.getSelectedItem().toString(),Integer.parseInt(textFieldExperience.getText()))){
                     Helper.messageSuccess("Creating Successfully");
                     dispose();
-                    mainWindow mainWindowForm = new mainWindow();
+                    mainWindow.fillTable(PersonDao.getList());
                 }
                 else {
                     Helper.messageFailed("Creating Failed");

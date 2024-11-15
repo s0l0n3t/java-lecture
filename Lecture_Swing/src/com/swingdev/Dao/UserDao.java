@@ -36,7 +36,7 @@ public class UserDao implements IDaoClass{
             Statement statement = DBConnector.getInstance().createStatement();
             ResultSet resultSet = statement.executeQuery(Config.USER_LIST_QUERY);
             while (resultSet.next()){
-                obj = new User(resultSet.getInt("id"),resultSet.getNString("username"),resultSet.getNString("password"),resultSet.getNString("email"),resultSet.getString("type"));
+                obj = objectMatch(resultSet);
                 userArrayList.add(obj);
             }
         } catch (SQLException exception){

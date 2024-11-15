@@ -20,7 +20,7 @@ public class PersonDao implements IDaoClass{
             PreparedStatement preparedStatement = DBConnector.getInstance().prepareStatement(personExistSqlQuery);
             preparedStatement.setString(1,name);
             preparedStatement.setString(2,surname);
-            ResultSet resultSet = preparedStatement.getResultSet();
+            ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()){
                 obj = objectMatch(resultSet);
             }
@@ -29,6 +29,44 @@ public class PersonDao implements IDaoClass{
             System.out.println(exception.toString());
         }
         return obj;
+    }
+    public static ArrayList<Person> findObjectArray(String name,String surname){
+        ArrayList<Person> personArrayList = new ArrayList<>();
+        Person obj = new Person();
+        String personExistSqlQuery = "SELECT * FROM employee WHERE name = ? AND surname = ?";
+        try {
+            PreparedStatement preparedStatement = DBConnector.getInstance().prepareStatement(personExistSqlQuery);
+            preparedStatement.setString(1,name);
+            preparedStatement.setString(2,surname);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()){
+                obj = objectMatch(resultSet);
+                personArrayList.add(obj);
+            }
+
+        } catch (SQLException exception){
+            System.out.println(exception.toString());
+        }
+        return personArrayList;
+    }
+    //Overloading
+    public static ArrayList<Person> findObjectArray(String name){
+        ArrayList<Person> personArrayList = new ArrayList<>();
+        Person obj = new Person();
+        String personExistSqlQuery = "SELECT * FROM employee WHERE name = ?";
+        try {
+            PreparedStatement preparedStatement = DBConnector.getInstance().prepareStatement(personExistSqlQuery);
+            preparedStatement.setString(1,name);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()){
+                obj = objectMatch(resultSet);
+                personArrayList.add(obj);
+            }
+
+        } catch (SQLException exception){
+            System.out.println(exception.toString());
+        }
+        return personArrayList;
     }
     public static boolean createObject(String name,String surname,int permit,String type, int experience){
         String personCreateSqlQuery = "INSERT INTO employee " +
