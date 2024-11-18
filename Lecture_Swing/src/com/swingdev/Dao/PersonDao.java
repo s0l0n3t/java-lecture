@@ -90,6 +90,38 @@ public class PersonDao implements IDaoClass{
         }
         return true;
     }
+    public static boolean modifyObject(int id,String name, String surname,int permit, String type,int experience){
+        String personModifySqlQuery =
+                "UPDATE employee SET name = ?,"+
+                "surname = ?," + "permit = ?," + "type = ?," + "experience = ? WHERE id = ?";
+        try {
+            PreparedStatement preparedStatement = DBConnector.getInstance().prepareStatement(personModifySqlQuery);
+            preparedStatement.setString(1,name);
+            preparedStatement.setString(2,surname);
+            preparedStatement.setInt(3,permit);
+            preparedStatement.setString(4,type);
+            preparedStatement.setInt(5,experience);
+            preparedStatement.setInt(6,id);
+            preparedStatement.executeUpdate();
+        }catch (SQLException exception){
+            System.out.println(exception.toString());
+            return false;
+        }
+        return true;
+
+    }
+    public static boolean deleteObject(int id){
+        String personDeleteSqlQuery = "DELETE FROM employee WHERE id = ?";
+        try {
+            PreparedStatement preparedStatement = DBConnector.getInstance().prepareStatement(personDeleteSqlQuery);
+            preparedStatement.setInt(1,id);
+            preparedStatement.executeUpdate();
+        }catch (SQLException exception){
+            System.out.println(exception.toString());
+            return false;
+        }
+        return true;
+    }
 
     public static ArrayList<Person> getList(){
         ArrayList<Person> personArrayList = new ArrayList<>();

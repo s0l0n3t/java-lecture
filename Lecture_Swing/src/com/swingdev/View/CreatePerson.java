@@ -18,6 +18,7 @@ public class CreatePerson extends JFrame{
     private JTextField textFieldName;
     private JComboBox personTypeCombobox;
     private JButton employeeRegisterButton;
+    private boolean isFormUpdate = false;
 
     public CreatePerson(){
         setFormTools(this.personTypeCombobox,300,400);
@@ -26,13 +27,25 @@ public class CreatePerson extends JFrame{
         employeeRegisterButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(PersonDao.createObject(textFieldName.getText(),textFieldSurname.getText(),calculatePermit(),personTypeCombobox.getSelectedItem().toString(),Integer.parseInt(textFieldExperience.getText()))){
-                    Helper.messageSuccess("Creating Successfully");
-                    dispose();
-                    mainWindow.fillTable(PersonDao.getList());
+                if(isFormUpdate == false){
+                    if(PersonDao.createObject(textFieldName.getText(),textFieldSurname.getText(),calculatePermit(),personTypeCombobox.getSelectedItem().toString(),Integer.parseInt(textFieldExperience.getText()))){
+                        Helper.messageSuccess("Creating Successfully");
+                        dispose();
+                        mainWindow.fillTable(PersonDao.getList());
+                    }
+                    else {
+                        Helper.messageFailed("Creating Failed");
+                    }
                 }
-                else {
-                    Helper.messageFailed("Creating Failed");
+                if(isFormUpdate == true){
+                    if(PersonDao.modifyObject(mainWindow.getSelectedItemId(),textFieldName.getText(),textFieldSurname.getText(),calculatePermit(),personTypeCombobox.getSelectedItem().toString(),Integer.parseInt(textFieldExperience.getText()))){
+                        Helper.messageSuccess("Modify success");
+                        dispose();
+                        mainWindow.fillTable(PersonDao.getList());
+                    }
+                    else {
+                        Helper.messageFailed("Modify Failed");
+                    }
                 }
             }
         });
@@ -48,5 +61,44 @@ public class CreatePerson extends JFrame{
     }
     private int calculatePermit(){
         return Person.calculatePermit(personTypeCombobox.getSelectedItem().toString(),Integer.parseInt(textFieldExperience.getText()));
+    }
+
+    public JTextField getTextFieldName() {
+        return textFieldName;
+    }
+
+    public JTextField getTextFieldSurname() {
+        return textFieldSurname;
+    }
+
+    public void setTextFieldSurname(String textFieldSurname) {
+        this.textFieldSurname.setText(textFieldSurname);
+    }
+
+    public JTextField getTextFieldExperience() {
+        return textFieldExperience;
+    }
+
+    public void setTextFieldExperience(String textFieldExperience) {
+        this.textFieldExperience.setText(textFieldExperience);
+    }
+
+    public void setTextFieldName(String textFieldName) {
+        this.textFieldName.setText(textFieldName);
+    }
+
+    public JComboBox getPersonTypeCombobox() {
+        return personTypeCombobox;
+    }
+
+    public void setPersonTypeCombobox(JComboBox personTypeCombobox) {
+        this.personTypeCombobox = personTypeCombobox;
+    }
+
+    public void setIsFormUpdate(Boolean isFormUpdate){
+        this.isFormUpdate = isFormUpdate;
+    }
+    public boolean isFormUpdate() {
+        return isFormUpdate;
     }
 }

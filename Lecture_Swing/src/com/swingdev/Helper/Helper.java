@@ -16,9 +16,11 @@ public class Helper{
     }
     public static void messageSuccess(String message){
         JOptionPane.showMessageDialog(null,message,"Success",JOptionPane.INFORMATION_MESSAGE);
+        UIManager.put("OptionPane.okButtonText", "CONFIRM");
     }
     public static void messageFailed(String message){
         JOptionPane.showMessageDialog(null,message,"Failed",JOptionPane.INFORMATION_MESSAGE);
+        UIManager.put("OptionPane.okButtonText", "CONFIRM");
     }
     public static ArrayList<String> textSplit(String inputText){
         String word = "";

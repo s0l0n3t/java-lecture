@@ -87,13 +87,5 @@ public class Example extends JFrame {
 class Main  {
     public static void main(String[] args) {
         Example firstPanel = new Example();
-//        for(int i =0;i<Person.getList().size();i++){
-//            System.out.println(Person.getList().get(i).getId());
-//            System.out.println(Person.getList().get(i).getName());
-//            System.out.println(Person.getList().get(i).getSurname());
-//            System.out.println(Person.getList().get(i).getPermit());
-//            System.out.println(Person.getList().get(i).getType());
-//            System.out.println(Person.getList().get(i).getExperience());
-//        }
     }
 }

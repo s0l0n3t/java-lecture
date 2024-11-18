@@ -27,7 +27,7 @@ public class mainWindow extends JFrame{
     private JTable tblPerson;
     private JButton btnExit;
     private static DefaultTableModel tblModel;
-
+    private static int selectedItemId;
 
 
     public mainWindow(){
@@ -73,6 +73,15 @@ public class mainWindow extends JFrame{
                 if(textPressEventHandler(e) == false){
                         e.setKeyChar('\0');
                         //add warning dialog
+                }
+            }
+        });
+        tblPerson.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseReleased(MouseEvent e) {
+                super.mouseReleased(e);
+                if(e.getButton() == MouseEvent.BUTTON3){
+                    createPopupMenu().show(e.getComponent(),e.getX(),e.getY());
                 }
             }
         });
@@ -166,7 +175,36 @@ public class mainWindow extends JFrame{
             default:
                 return PersonDao.findObjectArray(textBoxArrayList.get(0));
         }
-
+    }
+    private JPopupMenu createPopupMenu(){
+        JPopupMenu popupMenu = new JPopupMenu("table listener");
+        JMenuItem delete = new JMenuItem("Delete");
+        JMenuItem edit = new JMenuItem("Edit");
+        popupMenu.add(delete);
+        popupMenu.add(edit);
+        selectedItemId = (int) tblPerson.getValueAt(tblPerson.getSelectedRow(),0);
+        delete.addActionListener(e -> {
+            if(PersonDao.deleteObject(getSelectedItemId())){
+                Helper.messageSuccess("Delete Successfully");
+            }
+            else {
+                Helper.messageFailed("Delete Failed");
+            }
+            fillTable(PersonDao.getList());
+            //create form delete here
+        });
+        edit.addActionListener(e -> {
+            CreatePerson createPersonForm = new CreatePerson();
+            createPersonForm.setIsFormUpdate(true);
+            createPersonForm.setTextFieldName((String) tblPerson.getValueAt(tblPerson.getSelectedRow(),1));
+            createPersonForm.setTextFieldSurname((String) tblPerson.getValueAt(tblPerson.getSelectedRow(),2));
+            createPersonForm.setTextFieldExperience(String.valueOf(tblPerson.getValueAt(tblPerson.getSelectedRow(),5)));
+            createPersonForm.getPersonTypeCombobox().setSelectedItem((String)tblPerson.getValueAt(tblPerson.getSelectedRow(),4));//selected index
+        });
+        return popupMenu;
     }
 
+    public static int getSelectedItemId() {
+        return selectedItemId;
+    }
 }
