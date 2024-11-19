@@ -108,7 +108,6 @@ public class PersonDao implements IDaoClass{
             return false;
         }
         return true;
-
     }
     public static boolean deleteObject(int id){
         String personDeleteSqlQuery = "DELETE FROM employee WHERE id = ?";

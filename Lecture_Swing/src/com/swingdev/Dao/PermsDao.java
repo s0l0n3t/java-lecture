@@ -2,7 +2,6 @@ package com.swingdev.Dao;
 
 import com.swingdev.Helper.DBConnector;
 import com.swingdev.Model.UserPerms;
-
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;

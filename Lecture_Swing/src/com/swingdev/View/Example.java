@@ -41,7 +41,6 @@ public class Example extends JFrame {
         button2.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println();
                 if(UserDao.findObject(usernameField.getText(),passwordField.getText()).getEmail() != null){
                     accountObject = UserDao.findObject(usernameField.getText(),passwordField.getText());
                     userPerms = PermsDao.findObject(UserDao.findObject(usernameField.getText(),passwordField.getText()).getType());

@@ -35,6 +35,7 @@ public class mainWindow extends JFrame{
         tblModel = new DefaultTableModel();
         windowController(800,500);
         setToolText();
+        setVisible(true);
         buttonAccess();
         setTable(this.tblModel,this.tblPerson);
         fillTable(PersonDao.getList());
@@ -79,9 +80,13 @@ public class mainWindow extends JFrame{
         tblPerson.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseReleased(MouseEvent e) {
-                super.mouseReleased(e);
-                if(e.getButton() == MouseEvent.BUTTON3){
-                    createPopupMenu().show(e.getComponent(),e.getX(),e.getY());
+                try{
+                    super.mouseReleased(e);
+                    if(e.getButton() == MouseEvent.BUTTON3 && Example.userPerms.isWriting()){
+                        createPopupMenu().show(e.getComponent(),e.getX(),e.getY());
+                    }
+                }catch (Exception exception){
+                    System.out.println(exception.toString());
                 }
             }
         });
@@ -106,7 +111,6 @@ public class mainWindow extends JFrame{
     }
 
     private void buttonAccess(){
-        setVisible(true);
         if(isAddable(Example.userPerms)){
             btnAdd.setEnabled(true);
         }
