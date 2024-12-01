@@ -11,6 +11,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 
 public class Example extends JFrame {
     private JPanel wrapper;
@@ -36,7 +38,6 @@ public class Example extends JFrame {
         setLocation(Helper.getCenterX(Toolkit.getDefaultToolkit().getScreenSize(),getSize()),Helper.getCenterY(Toolkit.getDefaultToolkit().getScreenSize(),getSize()));
         setToolText();
         setVisible(true);
-
         setResizable(false);
         button2.addActionListener(new ActionListener() {
             @Override
@@ -59,8 +60,6 @@ public class Example extends JFrame {
                 RegisterForm registerForm = new RegisterForm();
             }
         });
-
-
         btnShowPassword.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {//password show and hide button action
@@ -82,9 +81,10 @@ public class Example extends JFrame {
     }
 
 
+
 }
 class Main  {
     public static void main(String[] args) {
-        Example firstPanel = new Example();
+        new Example();
     }
 }

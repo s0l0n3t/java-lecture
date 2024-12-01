@@ -26,24 +26,50 @@ public class mainWindow extends JFrame{
     private JScrollPane scrlPerson;
     private JTable tblPerson;
     private JButton btnExit;
-    private static DefaultTableModel tblModel;
+    private DefaultTableModel tblModel;
     private static int selectedItemId;
 
 
     public mainWindow(){
         setContentPane(panelAccount);
-        tblModel = new DefaultTableModel();
+        tblModel = new DefaultTableModel(){
+            @Override
+            public boolean isCellEditable(int row,int column){
+                //if we want to non-editable some of columns
+//                if(column == 0){
+//                    return false;
+//                }
+                return false;
+            }
+        };
         windowController(800,500);
         setToolText();
         setVisible(true);
         buttonAccess();
         setTable(this.tblModel,this.tblPerson);
         fillTable(PersonDao.getList());
+        tblPerson.addMouseListener(new MouseAdapter() {
+            /**
+             * mouse right click selection {@param mousePressed}
+             * @param e the event to be processed
+             */
+            @Override
+            public void mousePressed(MouseEvent e) {
+                int tblSelectedPoint = tblPerson.rowAtPoint(new Point(e.getPoint()));
+                tblPerson.setRowSelectionInterval(tblSelectedPoint,tblSelectedPoint);
+            }
+        });
 
         btnAdd.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 CreatePerson createPersonForm = new CreatePerson();
+                createPersonForm.addWindowListener(new WindowAdapter() {
+                    @Override
+                    public void windowClosed(WindowEvent e) {
+                        fillTable(PersonDao.getList());
+                    }
+                });
             }
         });
         btnExit.addActionListener(new ActionListener() {
@@ -51,6 +77,14 @@ public class mainWindow extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 dispose();
                 Example newForm = new Example();
+            }
+        });
+        textSearch.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyPressed(KeyEvent e) {
+                if(e.getKeyCode() == KeyEvent.VK_ENTER){
+                    btnSearch.doClick();
+                }
             }
         });
         btnSearch.addActionListener(new ActionListener() {
@@ -78,6 +112,10 @@ public class mainWindow extends JFrame{
             }
         });
         tblPerson.addMouseListener(new MouseAdapter() {
+            /**
+             * when mouse right-clicked, we call {@param createPopupMenu}.
+             * @param e : creates popup menu that includes edit and delete features.
+             */
             @Override
             public void mouseReleased(MouseEvent e) {
                 try{
@@ -136,7 +174,7 @@ public class mainWindow extends JFrame{
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setLocation(Helper.getCenterX(Toolkit.getDefaultToolkit().getScreenSize(),getSize()),Helper.getCenterY(Toolkit.getDefaultToolkit().getScreenSize(),getSize()));
     }
-    public static void fillTable(ArrayList<Person> personArrayList){
+    public void fillTable(ArrayList<Person> personArrayList){
         tblModel.setRowCount(0);//clear Jtable model
         for(int i =0;i< personArrayList.size();i++){
             Object[] personTableRow = new Object[Helper.personColumnList.length];
@@ -195,7 +233,6 @@ public class mainWindow extends JFrame{
                 Helper.messageFailed("Delete Failed");
             }
             fillTable(PersonDao.getList());
-            //create form delete here
         });
         edit.addActionListener(e -> {
             CreatePerson createPersonForm = new CreatePerson();
@@ -204,6 +241,12 @@ public class mainWindow extends JFrame{
             createPersonForm.setTextFieldSurname((String) tblPerson.getValueAt(tblPerson.getSelectedRow(),2));
             createPersonForm.setTextFieldExperience(String.valueOf(tblPerson.getValueAt(tblPerson.getSelectedRow(),5)));
             createPersonForm.getPersonTypeCombobox().setSelectedItem((String)tblPerson.getValueAt(tblPerson.getSelectedRow(),4));//selected index
+            createPersonForm.addWindowListener(new WindowAdapter() {
+                @Override
+                public void windowClosed(WindowEvent e) {
+                    fillTable(PersonDao.getList());
+                }
+            });
         });
         return popupMenu;
     }

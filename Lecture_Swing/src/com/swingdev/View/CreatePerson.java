@@ -9,6 +9,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 
 public class CreatePerson extends JFrame{
     private JPanel pnlCreatePerson;
@@ -30,7 +32,6 @@ public class CreatePerson extends JFrame{
                     if(PersonDao.createObject(textFieldName.getText(),textFieldSurname.getText(),calculatePermit(),personTypeCombobox.getSelectedItem().toString(),Integer.parseInt(textFieldExperience.getText()))){
                         Helper.messageSuccess("Creating Successfully");
                         dispose();
-                        mainWindow.fillTable(PersonDao.getList());
                     }
                     else {
                         Helper.messageFailed("Creating Failed");
@@ -40,7 +41,6 @@ public class CreatePerson extends JFrame{
                     if(PersonDao.modifyObject(mainWindow.getSelectedItemId(),textFieldName.getText(),textFieldSurname.getText(),calculatePermit(),personTypeCombobox.getSelectedItem().toString(),Integer.parseInt(textFieldExperience.getText()))){
                         Helper.messageSuccess("Modify success");
                         dispose();
-                        mainWindow.fillTable(PersonDao.getList());
                     }
                     else {
                         Helper.messageFailed("Modify Failed");
@@ -56,7 +56,9 @@ public class CreatePerson extends JFrame{
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setLocation(Helper.getCenterX(Toolkit.getDefaultToolkit().getScreenSize(),getSize()),Helper.getCenterY(Toolkit.getDefaultToolkit().getScreenSize(),getSize()));
         personTypeCombobox.setModel(new DefaultComboBoxModel(new String[]{Person.TYPE.type1.name(),Person.TYPE.type2.name(),Person.TYPE.type3.name()}));
-
+        keyListener(textFieldExperience);
+        keyListener(textFieldName);
+        keyListener(textFieldSurname);
     }
     private int calculatePermit(){
         return Person.calculatePermit(personTypeCombobox.getSelectedItem().toString(),Integer.parseInt(textFieldExperience.getText()));
@@ -99,5 +101,15 @@ public class CreatePerson extends JFrame{
     }
     public boolean isFormUpdate() {
         return isFormUpdate;
+    }
+    private void keyListener(JTextField jTextField){
+        jTextField.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyPressed(KeyEvent e) {
+                if(e.getKeyCode() == KeyEvent.VK_ENTER){
+                    employeeRegisterButton.doClick();
+                }
+            }
+        });
     }
 }
