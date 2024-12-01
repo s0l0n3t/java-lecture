@@ -12,6 +12,6 @@ This repository created under Java-Lecture repository. So this project includes 
 <details>
   <summary>Project assets</summary>
   
-  ![github](/assets/loginPage.png)
+![github](/assets/loginPage.png)
   
 </details>
