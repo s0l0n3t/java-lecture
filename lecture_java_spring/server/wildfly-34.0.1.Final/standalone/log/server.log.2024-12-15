@@ -1,0 +1,16 @@
+2024-12-15 12:51:06,253 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 24) WFLYUT0022: Unregistered web context: '/SpringFrameworkEdu-1.0-SNAPSHOT' from server 'default-server'
+2024-12-15 12:51:07,866 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-8) WFLYSRV0028: Stopped deployment SpringFrameworkEdu-1.0-SNAPSHOT (runtime-name: SpringFrameworkEdu-1.0-SNAPSHOT.war) in 1980ms
+2024-12-15 12:51:08,466 INFO  [org.jboss.as.server] (management-handler-thread - 2) WFLYSRV0009: Undeployed "SpringFrameworkEdu-1.0-SNAPSHOT" (runtime-name: "SpringFrameworkEdu-1.0-SNAPSHOT.war")
+2024-12-15 12:51:08,990 INFO  [org.jboss.as.server] (management-handler-thread - 2) WFLYSRV0272: Suspending server
+2024-12-15 12:51:09,055 INFO  [org.jboss.as.ejb3] (management-handler-thread - 2) WFLYEJB0493: Jakarta Enterprise Beans subsystem suspension complete
+2024-12-15 12:51:09,081 INFO  [org.jboss.as.server] (Management Triggered Shutdown) WFLYSRV0241: Shutting down in response to management operation 'shutdown'
+2024-12-15 12:51:09,205 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-3) WFLYUT0019: Host default-host stopping
+2024-12-15 12:51:09,209 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-4) WFLYMAIL0002: Unbound mail session [java:jboss/mail/Default]
+2024-12-15 12:51:09,228 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-3) WFLYJCA0010: Unbound data source [java:jboss/datasources/ExampleDS]
+2024-12-15 12:51:09,280 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-6) WFLYUT0008: Undertow HTTPS listener https suspending
+2024-12-15 12:51:09,287 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-3) WFLYUT0008: Undertow HTTP listener default suspending
+2024-12-15 12:51:09,300 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-6) WFLYUT0007: Undertow HTTPS listener https stopped, was bound to 127.0.0.1:8443
+2024-12-15 12:51:09,302 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-3) WFLYUT0007: Undertow HTTP listener default stopped, was bound to 127.0.0.1:8080
+2024-12-15 12:51:09,317 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-7) WFLYUT0004: Undertow 2.3.18.Final stopping
+2024-12-15 12:51:09,351 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-7) WFLYJCA0019: Stopped Driver service with driver-name = h2
+2024-12-15 12:51:09,412 INFO  [org.jboss.as] (MSC service thread 1-1) WFLYSRV0050: WildFly 34.0.1.Final (WildFly Core 26.0.1.Final) stopped in 268ms

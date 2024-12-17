@@ -6,19 +6,19 @@ import jdk.jfr.Name;
 import lombok.*;
 import lombok.extern.log4j.Log4j2;
 
-@Data
+
 @AllArgsConstructor //Parametreli constructor yapısı
 @Builder
 
 //cdi ==> bean
-@Named (value = "namedTutorial")
+@Named (value = "namedClass")
 @ApplicationScoped
-
+@Data
 public class NamedClass {
     private Long namedId;
     private String namedData;
 
-    
+
     public NamedClass(){
         this.namedData ="Hello, its NamedClass cdi bean";
     }
