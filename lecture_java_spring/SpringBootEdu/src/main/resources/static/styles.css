@@ -1,0 +1,20 @@
+.container{
+    margin-top: 50px;
+}
+.form-group{
+    width: 20%;
+    margin: 0 auto;
+    bottom: 10px;
+    text-align: center;
+}
+label{
+    display: flex;
+    justify-content: flex-start;  /*position: start */
+    width: 100%;
+    margin: 10px;
+    font-size: 20px;
+    font-family: arial;
+}
+.navbar-nav .nav-item {
+    margin-right: 15px;
+}

@@ -1,0 +1,58 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Homepage</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../styles.css" th:href="@{../styles.css}" />
+</head>
+
+<body>
+<header>
+    <!-- place navbar here -->
+    <div th:fragment="navbar">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/homepage">FurkanDev</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav" style="position: absolute;right: 5%;">
+                    <li class="nav-item">
+                        <a th:class="${navbarVarHome}" aria-current="page" href="/homepage">Home</a>
+                    </li> <!-- nav-link active -->
+                    <li class="nav-item">
+                        <a th:class="${navbarVarThymeleaf}" href="/thymeleaf/model">Thymeleaf</a>
+                    </li>
+                    <li class="nav-item">
+                        <a th:class="${navbarVarProjects}" href="/thymeleaf/messages">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a th:class="${navbarVarContact}" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    </div>
+</header>
+
+<main class="text-center">
+    <p th:text="'This is homepage'" class="display-1 bg-dark text-white container " style="display:flex;padding-top: 10%"></p>
+
+</main>
+
+<footer>
+    <p class="text-end bg-dark text-white container-fluid " style="margin-top: 50px;position: absolute;; bottom: 0;">&copy; FurkanDev</p>
+</footer>
+
+<!-- Bootstrap JavaScript Libraries -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
