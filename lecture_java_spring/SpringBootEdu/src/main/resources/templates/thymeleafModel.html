@@ -21,14 +21,14 @@
     <p th:text="'this is thymeleaf'" class="display-1 bg-dark text-white container" ></p>
     <p th:text="${p1Model}" class="display-1 bg-dark text-white container" ></p>
     <p th:text="${p2Model}" class="display-1 bg-dark text-white container" ></p>
-    <p th:text="${productVar.getProductName() +' '+ productVar.getProductId()}" class="display-1 bg-dark text-white container" ></p>
-    <form action="">
-        <div class="form-group">
+    <form action="/thymeleaf" method="post">
+        <div class="form-group" th:style="${modelVar}">
             <label th:text="#{email}" for="email"></label>
             <input type="email" class="form-control" id="email" name="email" placeholder="Enter email address" autofocus required>
             <button class="btn btn-primary mt-3">Submit</button>
-
         </div>
+        <!-- <label th:text="#{password}" for="password"></label>
+            <input type="password" class="form-control" id="password" name="password" placeholder="Enter password" autofocus required> -->
 
 
     </form>
