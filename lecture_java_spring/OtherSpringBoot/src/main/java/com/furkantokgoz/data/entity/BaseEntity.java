@@ -1,5 +1,6 @@
 package com.furkantokgoz.data.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.Getter;
@@ -17,9 +18,10 @@ import java.util.Date;
 @Getter
 @Setter
 @EntityListeners(AuditingEntityListener.class)
+@JsonIgnoreProperties(value = {"created_date,update_date"},allowGetters = true)
 public class BaseEntity {
     @Id
-    @Column(name = "id", nullable = false)
+    @Column(name = "id", nullable = false,updatable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column(name = "created_by")
@@ -31,7 +33,7 @@ public class BaseEntity {
     @Column(name = "created_date")
     @CreatedDate
     private Date createdDate;
-    @Column(name = "updated_date")
+    @Column(name = "updated_date",nullable = false)
     @LastModifiedDate
     private Date updateDate;
     @Column(name = "system_auto_date")

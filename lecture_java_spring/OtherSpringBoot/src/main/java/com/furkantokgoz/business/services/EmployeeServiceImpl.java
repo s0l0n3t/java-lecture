@@ -1,7 +1,6 @@
-package com.furkantokgoz.business.services.impl;
+package com.furkantokgoz.business.services;
 
 import com.furkantokgoz.business.dto.EmployeeDto;
-import com.furkantokgoz.business.services.EmployeeService;
 import com.furkantokgoz.data.entity.EmployeeEntity;
 import com.furkantokgoz.data.repository.EmployeeRepository;
 import com.furkantokgoz.exception.ResourceNotFoundException;
@@ -14,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.*;
 
 @Service
+@RequestMapping("/api/")
 public class EmployeeServiceImpl implements EmployeeService {
     @Autowired
     private EmployeeRepository employeeRepository;
@@ -21,7 +21,7 @@ public class EmployeeServiceImpl implements EmployeeService {
     private ModelMapper modelMapper;
 
     //http://localhost:8080/api
-    @GetMapping("/employees")
+
     @Override
     public List<EmployeeDto> getAllEmployees() {
         List<EmployeeDto> listDto = new ArrayList<>();
@@ -33,7 +33,7 @@ public class EmployeeServiceImpl implements EmployeeService {
         return listDto;
     }
 
-    @PostMapping("/employees/{id}")
+
     @Override
     public EmployeeDto createEmployee(EmployeeDto employeeDto) {
         EmployeeEntity employeeEntity = dtoEntity(employeeDto);
@@ -42,17 +42,16 @@ public class EmployeeServiceImpl implements EmployeeService {
     }
 
     //http://localhost:8080/api/employees/1
-    @GetMapping("/employees/{id}")
+
     @Override
-    @ResponseBody
-    public ResponseEntity<EmployeeDto> getEmployeeById(@PathVariable(name = "id") Long id){
+    public ResponseEntity<EmployeeDto> getEmployeeById(Long id){
         EmployeeEntity employeeEntity = (EmployeeEntity) employeeRepository.findAllById(Collections.singleton(id));
         EmployeeDto employeeDto = entityDto(employeeEntity);
         return ResponseEntity.ok(employeeDto);
     }
-    @PutMapping("/employees")
+
     @Override
-    public ResponseEntity<EmployeeDto> updateEmployee(@PathVariable Long id,@RequestBody EmployeeDto employeeDto) throws Throwable {
+    public ResponseEntity<EmployeeDto> updateEmployee(Long id, EmployeeDto employeeDto) throws Throwable {
         EmployeeEntity employeeEntity = dtoEntity(employeeDto);
         EmployeeEntity employeeBody = (EmployeeEntity) employeeRepository.findById(id).orElseThrow(()->new ResourceNotFoundException("Employee not exist id: "+ id));
         employeeBody.setFirstName(employeeEntity.getFirstName());
@@ -63,13 +62,13 @@ public class EmployeeServiceImpl implements EmployeeService {
         return ResponseEntity.ok(updatedEmployeeDto);
     }
 
-    @DeleteMapping("/employees/{id}")
+
     @Override
-    public ResponseEntity<Map<String, Boolean>> deleteEmployee(@PathVariable Long id) throws Throwable {
+    public ResponseEntity<Map<String, Boolean>> deleteEmployee(Long id) throws Throwable {
         EmployeeEntity employeeEntity = (EmployeeEntity) employeeRepository.findById(id).orElseThrow(()->new ResourceNotFoundException("Employee not exist id: "+ id));
         employeeRepository.delete(employeeEntity);
         Map<String,Boolean> response = new HashMap<>();
-        response.put("deleted",true);
+        response.put("deleted",Boolean.TRUE);
         return ResponseEntity.ok(response);
     }
 
