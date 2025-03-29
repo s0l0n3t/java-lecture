@@ -1,0 +1,46 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Thymeleaf Messages</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" th:href="@{/styles.css}" />
+
+</head>
+
+<body>
+<header>
+    <div th:replace="~{homepage :: navbar}"></div>  <!-- copy navbar -->
+</header>
+
+<main class="text-center">
+    <p th:text="'this is thymeleaf'" class="display-1 bg-dark text-white container" ></p>
+    <p th:text="${p1Model}" class="display-1 bg-dark text-white container" ></p>
+    <p th:text="${p2Model}" class="display-1 bg-dark text-white container" ></p>
+    <p th:text="${productVar.getProductName() +' '+ productVar.getProductId()}" class="display-1 bg-dark text-white container" ></p>
+    <form action="">
+        <div class="form-group">
+            <label th:text="#{email}" for="email"></label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Enter email address" autofocus required>
+            <button class="btn btn-primary mt-3">Submit</button>
+
+        </div>
+
+
+    </form>
+
+</main>
+
+<footer>
+    <!-- place footer here -->
+</footer>
+
+<!-- Bootstrap JavaScript Libraries -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
