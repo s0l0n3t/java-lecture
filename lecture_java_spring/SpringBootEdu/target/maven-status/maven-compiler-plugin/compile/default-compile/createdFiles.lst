@@ -1,0 +1,5 @@
+com\furkantokgoz\controller\BeanController.class
+com\furkantokgoz\dto\BeanDto.class
+com\furkantokgoz\bean\BeanConfig.class
+com\furkantokgoz\SpringBootEduApplication.class
+com\furkantokgoz\dto\BeanDto$BeanDtoBuilder.class

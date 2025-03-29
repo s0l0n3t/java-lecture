@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="SpringFrameworkEdu:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="25684407-7f4e-46d4-88c5-d90dea19bebb" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Jsp File" />
+        <option value="Jspx File" />
+        <option value="JavaScript File" />
+        <option value="cdi.beans_4_1" />
+        <option value="jsf" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2pnanuJOi1XtQQXOAE4p2QztiZ2" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JBoss/WildFly Server.JBoss/WildFly 34.0.1.Final.executor": "Run",
+    "JavaScript Debug.InjectClass.xhtml.executor": "Run",
+    "JavaScript Debug.Interceptor.xhtml.executor": "Run",
+    "JavaScript Debug.NewClass.xhtml.executor": "Run",
+    "JavaScript Debug.NoIocNoDi.xhtml.executor": "Run",
+    "JavaScript Debug.ProducesClass.xhtml.executor": "Run",
+    "JavaScript Debug.alternativeClass.xhtml.executor": "Run",
+    "JavaScript Debug.decorator.xhtml.executor": "Run",
+    "JavaScript Debug.qualifierClass.xhtml.executor": "Run",
+    "JavaScript Debug.stereotype.xhtml.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "springLectures",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/furkanWorks/java-lecture/lecture_java_spring/SpringFrameworkEdu/src/main/webapp/Decorator",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "MavenSettings",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\furkanWorks\java-lecture\lecture_java_spring\SpringFrameworkEdu\src\main\webapp\Decorator" />
+      <recent name="C:\furkanWorks\java-lecture\lecture_java_spring\SpringFrameworkEdu\src\main\webapp\stereotype" />
+      <recent name="C:\furkanWorks\java-lecture\lecture_java_spring\SpringFrameworkEdu\src\main\webapp\Interceptor" />
+      <recent name="C:\furkanWorks\java-lecture\lecture_java_spring\SpringFrameworkEdu\src\main\webapp\qualifier" />
+      <recent name="C:\furkanWorks\java-lecture\lecture_java_spring\SpringFrameworkEdu\src\main\webapp" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.decorator.xhtml">
+    <configuration name="Interceptor.xhtml" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:8080/SpringFrameworkEdu-1.0-SNAPSHOT/Interceptor/Interceptor.xhtml">
+      <method v="2" />
+    </configuration>
+    <configuration name="alternativeClass.xhtml" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:8080/SpringFrameworkEdu-1.0-SNAPSHOT/alternativeClass.xhtml">
+      <method v="2" />
+    </configuration>
+    <configuration name="decorator.xhtml" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:8080/SpringFrameworkEdu-1.0-SNAPSHOT/Decorator/decorator.xhtml">
+      <method v="2" />
+    </configuration>
+    <configuration name="qualifierClass.xhtml" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:8080/SpringFrameworkEdu-1.0-SNAPSHOT/qualifier/qualifierClass.xhtml">
+      <method v="2" />
+    </configuration>
+    <configuration name="stereotype.xhtml" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:8080/SpringFrameworkEdu-1.0-SNAPSHOT/stereotype/stereotype.xhtml">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.decorator.xhtml" />
+        <item itemvalue="JavaScript Debug.stereotype.xhtml" />
+        <item itemvalue="JavaScript Debug.Interceptor.xhtml" />
+        <item itemvalue="JavaScript Debug.qualifierClass.xhtml" />
+        <item itemvalue="JavaScript Debug.alternativeClass.xhtml" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.21565.193" />
+        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-IU-243.21565.193" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="25684407-7f4e-46d4-88c5-d90dea19bebb" name="Changes" comment="" />
+      <created>1733404464622</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1733404464622</updated>
+      <workItem from="1733404465747" duration="1948000" />
+      <workItem from="1733407042260" duration="1568000" />
+      <workItem from="1733652276609" duration="36823000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/.." />
+    </ignored-roots>
+  </component>
+</project>
